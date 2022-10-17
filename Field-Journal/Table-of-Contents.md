@@ -2,8 +2,6 @@
 # Table of Contents
 [Week 1](https://github.com/andydhpkp/MSSE-695-SE-RD/blob/main/Field-Journal/Week1.md)
 
-- []
-
 [Week 2](https://github.com/andydhpkp/MSSE-695-SE-RD/blob/main/Field-Journal/Week2.md)
 
 [Week 3](https://github.com/andydhpkp/MSSE-695-SE-RD/blob/main/Field-Journal/Week3.md)
