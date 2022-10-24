@@ -18,3 +18,8 @@
 ## Reflection
 
 ## Tracked Annotations
+
+## Hours
+| Date | Time | Location | Week | Task | Duration |
+| ------------- | ----------- | ---- | -- | --- | --- |
+| 2020-01-06 | 10:00 | Home | 1 | Setting up Camp | 1 |
