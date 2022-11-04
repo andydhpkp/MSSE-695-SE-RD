@@ -75,7 +75,7 @@ Potential Ideas for My Research Project:
 - Selenium testing?
 
 ## Reflection
-This week was disheartening in that I had such a hard time with all of Lab 2. I definitely struggled to make sense of what my errors were, and most of my errors lead to internet rabbit holes with no concrete answers. I was helped along the way by my classmates. They encountered similar issues, and it was very helpful to look at their various solutions. I was proud of myself when I finally got VScode downloaded, and the CRUD challenge completed, because at the start I was not very successful and I was starting to get those familiar feelings from Lab 2 that no matter what I did I would not make any real progress. But I felt very rewarded with seeing something tangible and knowing that I have at least gotten something correct with these first few labs.
+This week was disheartening in that I had such a hard time with all of Lab 2. I definitely struggled to make sense of what my errors were, and most of my errors lead to internet rabbit holes with no concrete answers. I was helped along the way by my classmates. They encountered similar issues, and it was very helpful to look at their various solutions. I was proud of myself when I finally got VScode downloaded, and the CRUD challenge completed, because at the start I was not very successful and I was starting to get those familiar feelings from Lab 2 that no matter what I did I would not make any real progress. But I felt very rewarded with seeing something tangible and knowing that I have at least gotten something correct with these first few labs. For next week I hope to be much less late with all of my work.
 
 ## Tracked Annotations
 
