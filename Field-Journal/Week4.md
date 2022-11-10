@@ -15,6 +15,13 @@
 - [ ] Breaking the Monolith (Part I)
 
 ## Weekly Notes
+### In Class Notes
+New lab will be two things:
+1. studying you certificates
+2. start to build out services for research project
+
+Get your recipe down that you are going to offer
+
 
 ## Reflection
 
