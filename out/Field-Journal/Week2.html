@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Week 2</title>
+        <style>
+/* From extension vscode.github */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.vscode-dark img[src$=\#gh-light-mode-only],
+.vscode-light img[src$=\#gh-dark-mode-only] {
+	display: none;
+}
+
+/* From extension ms-toolsai.jupyter */
+/* These classnames are inherited from bootstrap, but are present in most notebook renderers */
+
+.alert {
+    width: auto;
+    padding: 1em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+.alert > *:last-child {
+    margin-bottom: 0;
+}
+#preview > .alert:last-child {
+    /* Prevent this being set to zero by the default notebook stylesheet */
+    padding-bottom: 1em;
+}
+
+.alert-success {
+    /* Note there is no suitable color available, so we just copy "info" */
+    background-color: var(--theme-info-background);
+    color: var(--theme-info-foreground);
+}
+.alert-info {
+    background-color: var(--theme-info-background);
+    color: var(--theme-info-foreground);
+}
+.alert-warning {
+    background-color: var(--theme-warning-background);
+    color: var(--theme-warning-foreground);
+}
+.alert-danger {
+    background-color: var(--theme-error-background);
+    color: var(--theme-error-foreground);
+}
+
+</style>
+        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+<style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        <style>
+.task-list-item {
+    list-style-type: none;
+}
+
+.task-list-item-checkbox {
+    margin-left: -20px;
+    vertical-align: middle;
+    pointer-events: none;
+}
+</style>
+        
+    </head>
+    <body class="vscode-body vscode-light">
+        <h1 id="week-2">Week 2</h1>
+<h3 id="table-of-contents"><a href="https://github.com/andydhpkp/MSSE-695-SE-RD/blob/78b92f0f7c8991dc647ac5e7e3b2396296b2f7f4/Field-Journal/Table-of-Contents.html">Table of Contents</a></h3>
+<h2 id="to-do">To-Do</h2>
+<ul class="contains-task-list">
+<li class="task-list-item enabled"><input class="task-list-item-checkbox" checked=""type="checkbox"> Readings
+<ul class="contains-task-list">
+<li class="task-list-item enabled"><input class="task-list-item-checkbox" checked=""type="checkbox"> Runeson Ch. 3</li>
+<li class="task-list-item enabled"><input class="task-list-item-checkbox" checked=""type="checkbox"> Runeson Ch. 4</li>
+<li class="task-list-item enabled"><input class="task-list-item-checkbox" checked=""type="checkbox"> Linux for SE</li>
+</ul>
+</li>
+</ul>
+<h2 id="assignments">Assignments</h2>
+<ul class="contains-task-list">
+<li class="task-list-item enabled"><input class="task-list-item-checkbox" checked=""type="checkbox"> WR</li>
+<li class="task-list-item enabled"><input class="task-list-item-checkbox" checked=""type="checkbox"> Linux for SE</li>
+</ul>
+<h2 id="labs">Labs</h2>
+<ul class="contains-task-list">
+<li class="task-list-item enabled"><input class="task-list-item-checkbox" checked=""type="checkbox"> Building Linux OS and Classic Stack</li>
+</ul>
+<h2 id="weekly-notes">Weekly Notes</h2>
+<h3 id="lab-notes">Lab Notes</h3>
+<h4 id="lab-1">Lab 1</h4>
+<p>Installation helps for Lab 1
+<a href="https://ubuntu.com/server/docs/databases-mysql">https://ubuntu.com/server/docs/databases-mysql</a>
+<a href="https://ubuntu.com/server/docs/programming-php">https://ubuntu.com/server/docs/programming-php</a></p>
+<h4 id="lab-2">Lab 2</h4>
+<p>Ended up hitting many roadblocks with Lab 2, mainly not understanding what the 'metal' was. I went through obtaining a USB drive and attempting to rework it to having the .iso file and running my mac from the startup help with it, but it never showed up. I got everything installed through parallels, and I attempted to use a VPS through <a href="http://tilaa.com">tilaa.com</a>. No idea if this is the best way to do it, but it was the cheapest option for a VPS and I saw that mentioned as a reason to skip the metal portion of the lab. I looked through my classmates posts, and they were helpful in getting me through a couple of the steps, and knowing that I wasn't alone with my struggles. Here are the pictures of the progress I made through Lab 2.</p>
+<p><img src="file:////Users/andrewdurham/github.com/regis/MSSE-695-SE-RD/Field-Journal/images/Lab2/1.png" alt="image">
+<img src="file:////Users/andrewdurham/github.com/regis/MSSE-695-SE-RD/Field-Journal/images/Lab2/2.png" alt="image">
+<img src="file:////Users/andrewdurham/github.com/regis/MSSE-695-SE-RD/Field-Journal/images/Lab2/3.png" alt="image">
+<img src="file:////Users/andrewdurham/github.com/regis/MSSE-695-SE-RD/Field-Journal/images/Lab2/4.png" alt="image">
+<img src="file:////Users/andrewdurham/github.com/regis/MSSE-695-SE-RD/Field-Journal/images/Lab2/5.png" alt="image">
+<img src="file:////Users/andrewdurham/github.com/regis/MSSE-695-SE-RD/Field-Journal/images/Lab2/6.png" alt="image">
+<img src="file:////Users/andrewdurham/github.com/regis/MSSE-695-SE-RD/Field-Journal/images/Lab2/7.png" alt="image">
+<img src="file:////Users/andrewdurham/github.com/regis/MSSE-695-SE-RD/Field-Journal/images/Lab2/8.png" alt="image">
+<img src="file:////Users/andrewdurham/github.com/regis/MSSE-695-SE-RD/Field-Journal/images/Lab2/9.png" alt="image">
+<img src="file:////Users/andrewdurham/github.com/regis/MSSE-695-SE-RD/Field-Journal/images/Lab2/10.png" alt="image">
+<img src="file:////Users/andrewdurham/github.com/regis/MSSE-695-SE-RD/Field-Journal/images/Lab2/11.png" alt="image">
+<img src="file:////Users/andrewdurham/github.com/regis/MSSE-695-SE-RD/Field-Journal/images/Lab2/12.png" alt="image">
+<img src="file:////Users/andrewdurham/github.com/regis/MSSE-695-SE-RD/Field-Journal/images/Lab2/13.png" alt="image">
+<img src="file:////Users/andrewdurham/github.com/regis/MSSE-695-SE-RD/Field-Journal/images/Lab2/14.png" alt="image">
+<img src="file:////Users/andrewdurham/github.com/regis/MSSE-695-SE-RD/Field-Journal/images/Lab2/15.png" alt="image"></p>
+<h4 id="lab-3">Lab 3</h4>
+<p>The CRUD challenge posed a new challenge as I have no experience with Apache. I have used mysql before, but I was tripping myself up with not setting a root password and running into errors. To actually use the apache2 server, I went into the /var/www/html directory and added the files from the github to it. I attempted to download VScode, and that ended up being a struggle because I could only get to access to a few files and I had to figure out that having the ARM vs AMD was an issue. Eventually I found a guide that helped out a lot and it was downloaded. I had to create files from the terminal and then save within VScode with sudo privileges.</p>
+<p><img src="file:////Users/andrewdurham/github.com/regis/MSSE-695-SE-RD/Field-Journal/images/Lab3/1.png" alt="image">
+<img src="file:////Users/andrewdurham/github.com/regis/MSSE-695-SE-RD/Field-Journal/images/Lab3/2.png" alt="image">
+<img src="file:////Users/andrewdurham/github.com/regis/MSSE-695-SE-RD/Field-Journal/images/Lab3/3.png" alt="image">
+<img src="file:////Users/andrewdurham/github.com/regis/MSSE-695-SE-RD/Field-Journal/images/Lab3/CRUD1.png" alt="image">
+<img src="file:////Users/andrewdurham/github.com/regis/MSSE-695-SE-RD/Field-Journal/images/Lab3/CRUD2.png" alt="image">
+<img src="file:////Users/andrewdurham/github.com/regis/MSSE-695-SE-RD/Field-Journal/images/Lab3/CRUD3.png" alt="image">
+<img src="file:////Users/andrewdurham/github.com/regis/MSSE-695-SE-RD/Field-Journal/images/Lab3/CRUD4.png" alt="image">
+<img src="file:////Users/andrewdurham/github.com/regis/MSSE-695-SE-RD/Field-Journal/images/Lab3/CRUD5.png" alt="image">
+<img src="file:////Users/andrewdurham/github.com/regis/MSSE-695-SE-RD/Field-Journal/images/Lab3/CRUD6.png" alt="image">
+<img src="file:////Users/andrewdurham/github.com/regis/MSSE-695-SE-RD/Field-Journal/images/Lab3/CRUD7.png" alt="image"></p>
+<h3 id="in-class-notes">In Class Notes</h3>
+<h3 id="research-project-ideas">Research Project Ideas</h3>
+<p>Boundaries of what's acceptable</p>
+<ul>
+<li>Cloud server that you're going to work on (nginx)
+<ul>
+<li>Secure the server</li>
+</ul>
+</li>
+<li>Deploy some sort of service on there
+<ul>
+<li>his example was nextCloud</li>
+</ul>
+</li>
+</ul>
+<p>Inspired by another student using an application they have built. They took a Lacrosse Camp registration service and chose to utilize github and buildkite to test and deploy. Look into what buildkite is and see if it sparks anything.</p>
+<p>Potential Ideas for My Research Project:</p>
+<ul>
+<li>Use roundcube in the loser-league to operate as an email rundown/forgotten password service/yearly or weekly reminder</li>
+<li>Use Jenkins integration with github as an automated testing tool</li>
+<li>Change the storage to the Regis Cloud or some other Cloud storage for all the data</li>
+<li>Change the REST API to use GraphQL</li>
+<li>Selenium testing?</li>
+</ul>
+<h2 id="reflection">Reflection</h2>
+<p>This week was disheartening in that I had such a hard time with all of Lab 2. I definitely struggled to make sense of what my errors were, and most of my errors lead to internet rabbit holes with no concrete answers. I was helped along the way by my classmates. They encountered similar issues, and it was very helpful to look at their various solutions. I was proud of myself when I finally got VScode downloaded, and the CRUD challenge completed, because at the start I was not very successful and I was starting to get those familiar feelings from Lab 2 that no matter what I did I would not make any real progress. But I felt very rewarded with seeing something tangible and knowing that I have at least gotten something correct with these first few labs. For next week I hope to be much less late with all of my work.</p>
+<h2 id="tracked-annotations">Tracked Annotations</h2>
+<h2 id="hours">Hours</h2>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Time</th>
+<th>Location</th>
+<th>Week</th>
+<th>Task</th>
+<th>Duration</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>10/24</td>
+<td>6:00</td>
+<td>Home</td>
+<td>2</td>
+<td>Thinking of Research and Lab 2</td>
+<td>3</td>
+</tr>
+<tr>
+<td>10/25</td>
+<td>6:00</td>
+<td>Home</td>
+<td>2</td>
+<td>Labs 1,2, and 3</td>
+<td>3</td>
+</tr>
+<tr>
+<td>10/27</td>
+<td>7:00</td>
+<td>Home</td>
+<td>2</td>
+<td>Labs 1,2, and 3</td>
+<td>3</td>
+</tr>
+<tr>
+<td>10/30</td>
+<td>2:00</td>
+<td>Home</td>
+<td>2</td>
+<td>Installation helps</td>
+<td>4</td>
+</tr>
+<tr>
+<td>11/2</td>
+<td>7:00</td>
+<td>Home</td>
+<td>2</td>
+<td>CRUD</td>
+<td>4</td>
+</tr>
+</tbody>
+</table>
+
+        
+        
+    </body>
+    </html>

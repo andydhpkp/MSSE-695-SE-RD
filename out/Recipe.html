@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Recipe&colon; Download Mariadb and troubleshoot on Ubuntu</title>
+        <style>
+/* From extension vscode.github */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.vscode-dark img[src$=\#gh-light-mode-only],
+.vscode-light img[src$=\#gh-dark-mode-only] {
+	display: none;
+}
+
+/* From extension ms-toolsai.jupyter */
+/* These classnames are inherited from bootstrap, but are present in most notebook renderers */
+
+.alert {
+    width: auto;
+    padding: 1em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+.alert > *:last-child {
+    margin-bottom: 0;
+}
+#preview > .alert:last-child {
+    /* Prevent this being set to zero by the default notebook stylesheet */
+    padding-bottom: 1em;
+}
+
+.alert-success {
+    /* Note there is no suitable color available, so we just copy "info" */
+    background-color: var(--theme-info-background);
+    color: var(--theme-info-foreground);
+}
+.alert-info {
+    background-color: var(--theme-info-background);
+    color: var(--theme-info-foreground);
+}
+.alert-warning {
+    background-color: var(--theme-warning-background);
+    color: var(--theme-warning-foreground);
+}
+.alert-danger {
+    background-color: var(--theme-error-background);
+    color: var(--theme-error-foreground);
+}
+
+</style>
+        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+<style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        <style>
+.task-list-item {
+    list-style-type: none;
+}
+
+.task-list-item-checkbox {
+    margin-left: -20px;
+    vertical-align: middle;
+    pointer-events: none;
+}
+</style>
+        
+    </head>
+    <body class="vscode-body vscode-light">
+        <h1 id="recipe-download-mariadb-and-troubleshoot-on-ubuntu">Recipe: Download Mariadb and troubleshoot on Ubuntu</h1>
+<hr>
+<h4 id="-andrew-durham"><center> Andrew Durham</h4>
+<hr>
+<h2 id="overview">Overview</h2>
+<p>MariaDB is a community-developed fork of the MySQL RDMS. It is a lightweight and speedier alternative to MySQL. This recipe will show you how to install MariaDB on Ubuntu 22.04. It will also show you how to troubleshoot issues that may arise during the installation process.</p>
+<h2 id="requirements">Requirements</h2>
+<ol>
+<li>Parallels (or equivalent virtual product)</li>
+<li>Linux server running Ubuntu 22.04</li>
+</ol>
+<hr>
+<h2 id="number-here-steps">NUMBER HERE steps</h2>
+<h3 id="1-check-the-version-of-mysqlmariadb">1. Check the version of MySQL/MariaDB</h3>
+<p><code>dpkg -l | grep -E 'mysql|mariadb'</code></p>
+<h3 id="2-remove-conflicting-versions">2. Remove conflicting versions</h3>
+<p>Observe the list and remove conflicting versions of MySQL/MariaDB</p>
+<p><code>apt purge mysql-common</code></p>
+<h3 id="2-install-mariadb-database-server">2. Install MariaDB Database Server</h3>
+<p><code>sudo apt-get install mariadb-server mariadb-client</code></p>
+<p>Commands to start, stop, and check mariadb status:</p>
+<p><code>sudo systemctl enable mariadb.service</code></p>
+<p><code>sudo systemctl start mariadb.service</code></p>
+<p><code>sudo systemctl stop mariadb.service</code></p>
+<p>Run the following command to secure the mariadb server:</p>
+<p><code>sudo mysql_secure_installation</code></p>
+<h3 id="3-potential-issue-with-unmet-dependencies">3. Potential Issue with unmet dependencies</h3>
+<p>If the following error occurs:</p>
+<p><code>The following packages have unmet dependencies:  mariadb-server : Depends: mariadb-server-10.3 (&gt;= 1:10.3.31-0ubuntu0.22.04.1) but it is not going to be installed E: Unable to correct problems, you have held broken packages.</code></p>
+<p>Try Step 2 again, and if that doesn't work, try the following:</p>
+<p>Remove the mysql folder after backing it up:</p>
+<p><code>cp -r /etc/mysql /var/lib/mysql ~/</code></p>
+<p><code>rm -rf /etc/mysql /var/lib/mysql</code></p>
+<h3 id="4-potential-problem-with-open-dpkg">4. Potential problem with open dpkg</h3>
+<p>If the following error occurs:</p>
+<p><code>E: Could not get lock /var/lib/dpkg/lock-frontend - open (11: Resource temporarily unavailable)</code></p>
+<p>Try the following:</p>
+<p><code>sudo killall apt apt-get</code></p>
+<p>Attempt to start mariadb again, if that fails, try the following with caution:</p>
+<p><code>sudo rm /var/lib/apt/lists/lock</code></p>
+<p><code>sudo rm /var/cache/apt/archives/lock</code></p>
+<p><code>sudo rm /var/lib/dpkg/lock*</code></p>
+<p>then reconfigure the packages:</p>
+<p><code>sudo dpgk --configure -a</code></p>
+<p><code>sudo apt update</code></p>
+<h3 id="5-answer-the-installation-questions">5. Answer the installation questions</h3>
+<p>When prompted, answer the questions as follows:</p>
+<ul>
+<li>Enter current password for root (enter for none): Press Enter</li>
+<li>Set root password? [Y/n]: Y</li>
+<li>New password: Enter a password</li>
+<li>Re-enter new password: Enter the same password</li>
+<li>Remove anonymous users? [Y/n]: Y</li>
+<li>Disallow root login remotely? [Y/n]: Y</li>
+<li>Remove test database and access to it? [Y/n]: Y</li>
+<li>Reload privilege tables now? [Y/n]: Y</li>
+</ul>
+<h3 id="6-create-user-with-privileges">6. Create user with privileges</h3>
+<p>Open the mariaDB prompt:</p>
+<p><code>sudo mariadb</code></p>
+<p>Create a new user:</p>
+<p><code>GRANT ALL ON *.* TO 'admin'@'localhost' IDENTIFIED BY 'password' WITH GRANT OPTION;</code></p>
+<p>Flush the privileges:</p>
+<p><code>FLUSH PRIVILEGES;</code></p>
+<p>Exit:</p>
+<p><code>EXIT;</code></p>
+<h3 id="7-confirm-the-mariadb-service-is-running">7. Confirm the mariadb service is running</h3>
+<p>Ensure it is running:</p>
+<p><code>sudo systemctl start mariadb.service</code></p>
+<p>Check the status:</p>
+<p><code>sudo systemctl status mariadb.service</code></p>
+<p>Should recieve the following output:</p>
+<p><code>mariadb.service - MariaDB 10.1.48 database server      Loaded: loaded (/lib/systemd/system/mariadb.service; enabled; vendor preset: enabled)      Active: active (running) since Sat 2022-11-26 01:04:17 UTC; 35s ago        Docs: man:mariadbd(8)              https://mariadb.com/kb/en/library/systemd/</code></p>
+
+        
+        
+    </body>
+    </html>

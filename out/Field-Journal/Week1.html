@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Week 1</title>
+        <style>
+/* From extension vscode.github */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.vscode-dark img[src$=\#gh-light-mode-only],
+.vscode-light img[src$=\#gh-dark-mode-only] {
+	display: none;
+}
+
+/* From extension ms-toolsai.jupyter */
+/* These classnames are inherited from bootstrap, but are present in most notebook renderers */
+
+.alert {
+    width: auto;
+    padding: 1em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+.alert > *:last-child {
+    margin-bottom: 0;
+}
+#preview > .alert:last-child {
+    /* Prevent this being set to zero by the default notebook stylesheet */
+    padding-bottom: 1em;
+}
+
+.alert-success {
+    /* Note there is no suitable color available, so we just copy "info" */
+    background-color: var(--theme-info-background);
+    color: var(--theme-info-foreground);
+}
+.alert-info {
+    background-color: var(--theme-info-background);
+    color: var(--theme-info-foreground);
+}
+.alert-warning {
+    background-color: var(--theme-warning-background);
+    color: var(--theme-warning-foreground);
+}
+.alert-danger {
+    background-color: var(--theme-error-background);
+    color: var(--theme-error-foreground);
+}
+
+</style>
+        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+<style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        <style>
+.task-list-item {
+    list-style-type: none;
+}
+
+.task-list-item-checkbox {
+    margin-left: -20px;
+    vertical-align: middle;
+    pointer-events: none;
+}
+</style>
+        
+    </head>
+    <body class="vscode-body vscode-light">
+        <h1 id="week-1">Week 1</h1>
+<ul>
+<li><a href="#week-1">Week 1</a>
+<ul>
+<li><a href="#full-table-of-contents">Full Table of Contents</a></li>
+<li><a href="#to-do">To-Do</a></li>
+<li><a href="#assignments">Assignments</a></li>
+<li><a href="#labs">Labs</a></li>
+<li><a href="#weekly-notes">Weekly Notes</a>
+<ul>
+<li><a href="#class-documents-notes">Class Documents Notes</a></li>
+<li><a href="#linux-for-software-engineers-notes">Linux for Software Engineers Notes</a></li>
+<li><a href="#class-zoom-notes">Class Zoom Notes</a>
+<ul>
+<li><a href="#recipes">Recipes</a></li>
+<li><a href="#research-project">Research project</a></li>
+<li><a href="#lab">Lab</a></li>
+</ul>
+</li>
+<li><a href="#reading-notes">Reading Notes</a>
+<ul>
+<li><a href="#runeson-ch-1">Runeson Ch. 1</a></li>
+<li><a href="#runeson-ch-2">Runeson Ch. 2</a></li>
+</ul>
+</li>
+<li><a href="#lab-1">Lab</a></li>
+</ul>
+</li>
+<li><a href="#reflection">Reflection</a></li>
+<li><a href="#tracked-annotations">Tracked Annotations</a></li>
+<li><a href="#hours">Hours</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="full-table-of-contents"><a href="https://github.com/andydhpkp/MSSE-695-SE-RD/blob/78b92f0f7c8991dc647ac5e7e3b2396296b2f7f4/Field-Journal/Table-of-Contents.html">Full Table of Contents</a></h3>
+<h2 id="to-do">To-Do</h2>
+<ul class="contains-task-list">
+<li class="task-list-item enabled"><input class="task-list-item-checkbox" checked=""type="checkbox"> Readings
+<ul class="contains-task-list">
+<li class="task-list-item enabled"><input class="task-list-item-checkbox" checked=""type="checkbox"> Runeson Ch. 1</li>
+<li class="task-list-item enabled"><input class="task-list-item-checkbox" checked=""type="checkbox"> Runeson Ch. 2</li>
+<li class="task-list-item enabled"><input class="task-list-item-checkbox" checked=""type="checkbox"> Field book Guide</li>
+<li class="task-list-item enabled"><input class="task-list-item-checkbox" checked=""type="checkbox"> Linux for SE</li>
+</ul>
+</li>
+<li class="task-list-item enabled"><input class="task-list-item-checkbox" checked=""type="checkbox"> Go through all class documents</li>
+<li class="task-list-item enabled"><input class="task-list-item-checkbox" checked=""type="checkbox"> Post Introduction to Slack</li>
+<li class="task-list-item enabled"><input class="task-list-item-checkbox"type="checkbox"> Have at least ideas to share for research project</li>
+</ul>
+<h2 id="assignments">Assignments</h2>
+<ul class="contains-task-list">
+<li class="task-list-item enabled"><input class="task-list-item-checkbox" checked=""type="checkbox"> Field Book</li>
+<li class="task-list-item enabled"><input class="task-list-item-checkbox" checked=""type="checkbox"> Linux for SE</li>
+<li class="task-list-item enabled"><input class="task-list-item-checkbox" checked=""type="checkbox"> Reflection (3 P's)</li>
+<li class="task-list-item enabled"><input class="task-list-item-checkbox" checked=""type="checkbox"> Lab 1</li>
+<li class="task-list-item enabled"><input class="task-list-item-checkbox"type="checkbox"> Lab 2</li>
+</ul>
+<h2 id="labs">Labs</h2>
+<ul class="contains-task-list">
+<li class="task-list-item enabled"><input class="task-list-item-checkbox" checked=""type="checkbox"> Setting up Camp</li>
+<li class="task-list-item enabled"><input class="task-list-item-checkbox"type="checkbox"> Building Linux Servers</li>
+</ul>
+<h2 id="weekly-notes">Weekly Notes</h2>
+<h3 id="class-documents-notes">Class Documents Notes</h3>
+<p>Research Project general stages:</p>
+<ol>
+<li>Setup and configure Linux Server OS, virtual</li>
+<li>Setup and configure Linux Server OS (metal)
+<ol>
+<li>Note: Setup and configure will include LAMP stack and server hardening</li>
+</ol>
+</li>
+<li>Build and install private-cloud service (next cloud), and public-cloud services (website)</li>
+<li>Build and configure second server (metal)
+<ol>
+<li>Note: We will explore using a tool called ansible which is an orchestration tool to help manage our servers</li>
+</ol>
+</li>
+<li>Install NGinx and failover</li>
+<li>Designing architecture for service-oriented and/or microservices deployment
+<ol>
+<li>Note: We may modify these stages based on our progress</li>
+</ol>
+</li>
+</ol>
+<p>Research Questions: You will write no less than two, no more than five questions for your project</p>
+<p>Potential Ideas for My Research Project:</p>
+<ul>
+<li>Use roundcube in the loser-league to operate as an email rundown/forgotten password service/yearly or weekly reminder</li>
+<li>Use Jenkins integration with github as an automated testing tool</li>
+</ul>
+<h3 id="linux-for-software-engineers-notes">Linux for Software Engineers Notes</h3>
+<p>Ubuntu 16 was deprecated, so I am using their official site to download the latest version of Ubuntu Server 18.04.4 LTS.
+URL for what I used: <a href="https://medium.com/@paulrobu/how-to-run-ubuntu-22-04-vms-on-apple-m1-arm-based-systems-for-free-c8283fb38309">https://medium.com/@paulrobu/how-to-run-ubuntu-22-04-vms-on-apple-m1-arm-based-systems-for-free-c8283fb38309</a></p>
+<p>My computer will not allow me to download Oracle Virtual Box</p>
+<h3 id="class-zoom-notes">Class Zoom Notes</h3>
+<p>Plug to keep up on stuff: Focus more on the architecture than anything else</p>
+<h4 id="recipes">Recipes</h4>
+<p>Recipes can build on others.</p>
+<ul>
+<li>Try and keep them 10 steps or less</li>
+</ul>
+<h4 id="research-project">Research project</h4>
+<p>Look at the 6 stages in the document (researchProjectAndResearchQuestions)</p>
+<p>Part of it had to be E2E.</p>
+<p>Boundaries of what's acceptable</p>
+<ul>
+<li>Cloud server that you're going to work on (nginx)
+<ul>
+<li>Secure the server</li>
+</ul>
+</li>
+<li>Deploy some sort of service on their
+<ul>
+<li>his example was nextCloud</li>
+</ul>
+</li>
+</ul>
+<h4 id="lab">Lab</h4>
+<p>Share what you've been working on in class pre the lab</p>
+<h3 id="reading-notes">Reading Notes</h3>
+<h4 id="runeson-ch-1">Runeson Ch. 1</h4>
+<p>1.1 What is a case study?</p>
+<ul>
+<li>An approach to research that studies a phenomenon in its natural setting
+1.2 A brief history of case studies in software engineering
+1.3 Why a book on case studies in software engineering?</li>
+<li>There are a variety of components and stakeholders in software development that make documenting and understanding the process difficult
+<ul>
+<li>Three components of a Software Engineering situation:
+<ul>
+<li>Actor</li>
+<li>Technology</li>
+<li>Activity
+1.4 Conclusion</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>It is important to define guidelines for case study research in software engineering</li>
+</ul>
+<h4 id="runeson-ch-2">Runeson Ch. 2</h4>
+<p>2.1 Introduction</p>
+<ul>
+<li>Set out a scheme to help decide when case study is a feasible research approach
+2.2 Research Strategies</li>
+<li>3 different definitions for case study
+<ul>
+<li>A strategy for doing research that involves an empirical investigation of a contemporary phenomenon within its real-life context, using multiple sources of evidence</li>
+<li>Empirical inquiry that investigates a contemporary phenomenon within its real-life context using multiple sources of evidence</li>
+<li>A phenomenon in its natural setting, employing multiple methods of data collection to gather information from one or a few entities. The boundaries of the phenomenon are not clearly evident at the outset of the research and no experimental manipulation is involved</li>
+</ul>
+</li>
+<li>Case study in SE is an empirical inquiry that investigates a contemporary phenomenon within its real-life context using multiple sources of evidence</li>
+<li>3 main strategies:
+<ul>
+<li>Survey</li>
+<li>Experiment</li>
+<li>Action Research (influence or change some aspect of whatever is the focus of the research)
+2.3 Characteristics of Research Strategies</li>
+</ul>
+</li>
+<li>Purpose
+<ul>
+<li>4 general types of purpose
+<ul>
+<li>Exploratory</li>
+<li>Descriptive</li>
+<li>Explanatory</li>
+<li>Improvising</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Control and Data
+<ul>
+<li>Constant tradeoff between level of control and degree of realism</li>
+<li>Data is either quantitative or qualitative
+<ul>
+<li>Quantitative data is numerical</li>
+<li>Qualitative data is non-numerical</li>
+</ul>
+</li>
+<li>Research process is either fixed or flexible
+<ul>
+<li>Fixed research process is a pre-defined process</li>
+<li>Flexible research process is a process that is not pre-defined</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Triangulation
+<ul>
+<li>Taking multiple perspectives towards the studied object when relying primarily on qualitative data</li>
+<li>Data (source) triangulation
+<ul>
+<li>Using more than one source of data or collecting the data at different times</li>
+</ul>
+</li>
+<li>Observer triangulation
+<ul>
+<li>Using more than one observer</li>
+</ul>
+</li>
+<li>Methodological triangulation
+<ul>
+<li>Combining different methods of data collection</li>
+</ul>
+</li>
+<li>Theory triangulation
+<ul>
+<li>Combining different theories</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Replication
+<ul>
+<li>Transparency that allows others to replicate the research is the sign of trustworthy research</li>
+</ul>
+</li>
+<li>Inductive and Deductive Enquiries
+<ul>
+<li>Inductive
+<ul>
+<li>Theory is induced from the observations</li>
+</ul>
+</li>
+<li>Deductive
+<ul>
+<li>Theory is deduced from existing theory
+2.4 What makes a good case study?</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>The study of a topic supported by a variety of data sources
+2.5 When is the case study strategy feasible?</li>
+<li>When studying a contemporary phenomenon within its real-life context, especially when the boundaries between the phenomenon and the context are not clearly evident
+2.6 Case study research process</li>
+<li>5 major process steps
+<ul>
+<li>Case study design</li>
+<li>Preparation for data collection</li>
+<li>Collection of evidence</li>
+<li>Analysis of collected data</li>
+<li>Reporting
+2.7 Conclusion</li>
+</ul>
+</li>
+<li>Terminology and definitions vary somewhat, basic concepts lead to establishing a standard</li>
+</ul>
+<h3 id="lab">Lab</h3>
+<p>Attempted a download of Ubuntu and it didn't really work so I am restarting with Parallels as my virtual machine software.</p>
+<p>Image downloading Ubuntu from Parallel's help</p>
+<p><img src="file:////Users/andrewdurham/github.com/regis/MSSE-695-SE-RD/Field-Journal/images/Screen%20Shot%202022-10-23%20at%204.47.02%20PM.png" alt="image">
+<img src="file:////Users/andrewdurham/github.com/regis/MSSE-695-SE-RD/Field-Journal/images/Screen%20Shot%202022-10-23%20at%204.51.40%20PM.png" alt="image"></p>
+<p>following a combination of the instructions and my classmates fieldbooks.</p>
+<p><img src="file:////Users/andrewdurham/github.com/regis/MSSE-695-SE-RD/Field-Journal/images/Screen%20Shot%202022-10-23%20at%205.08.07%20PM.png" alt="image">
+<img src="file:////Users/andrewdurham/github.com/regis/MSSE-695-SE-RD/Field-Journal/images/Screen%20Shot%202022-10-23%20at%208.13.42%20PM.png" alt="image">
+<img src="file:////Users/andrewdurham/github.com/regis/MSSE-695-SE-RD/Field-Journal/images/Screen%20Shot%202022-10-23%20at%205.44.29%20PM.png" alt="image"></p>
+<h2 id="reflection">Reflection</h2>
+<p>So far this week I have finished a few of the tasks. I have posted my introduction, done the reading for the two chapters, and have completed lab 1. While going through the documents for the class, everything made sense, I still do not have an idea for my research project, but I am hopeful that before class on tuesday I will have a couple ideas. I am hoping to figure something out that can answer issues I am having at work, or just be something I've wanted to learn. I am very inexperienced with Linux, and have not done much in Virtual Machines or anything like that. I did my best to download Ubuntu through Parallels on my Mac, and as far as I know it went well. I unfortunately didn't realize what running servers on a &quot;metal&quot; really meant. So I am a little late and need to purchase a USB so I can get underway in the lab 2 assignment. Next week I hope to be more on top of the assignments so I can reach out for help and give myself more time to take a deeper dive into the labs.</p>
+<h2 id="tracked-annotations">Tracked Annotations</h2>
+<h2 id="hours">Hours</h2>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Time</th>
+<th>Location</th>
+<th>Week</th>
+<th>Task</th>
+<th>Duration</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>10/17</td>
+<td>10:55</td>
+<td>Home</td>
+<td>1</td>
+<td>Go through class documents</td>
+<td>1</td>
+</tr>
+<tr>
+<td>10/17</td>
+<td>4:30</td>
+<td>Home</td>
+<td>1</td>
+<td>Linux for SE</td>
+<td>3</td>
+</tr>
+<tr>
+<td>10/18</td>
+<td>6:00</td>
+<td>Home</td>
+<td>1</td>
+<td>Class</td>
+<td>3</td>
+</tr>
+<tr>
+<td>10/22</td>
+<td>11:00</td>
+<td>Home</td>
+<td>1</td>
+<td>Reading</td>
+<td>2</td>
+</tr>
+<tr>
+<td>10/23</td>
+<td>1:00</td>
+<td>Home</td>
+<td>1</td>
+<td>Lab</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+
+        
+        
+    </body>
+    </html>

@@ -1,0 +1,1002 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Table of Contents</title>
+        <style>
+/* From extension vscode.github */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.vscode-dark img[src$=\#gh-light-mode-only],
+.vscode-light img[src$=\#gh-dark-mode-only] {
+	display: none;
+}
+
+/* From extension ms-toolsai.jupyter */
+/* These classnames are inherited from bootstrap, but are present in most notebook renderers */
+
+.alert {
+    width: auto;
+    padding: 1em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+.alert > *:last-child {
+    margin-bottom: 0;
+}
+#preview > .alert:last-child {
+    /* Prevent this being set to zero by the default notebook stylesheet */
+    padding-bottom: 1em;
+}
+
+.alert-success {
+    /* Note there is no suitable color available, so we just copy "info" */
+    background-color: var(--theme-info-background);
+    color: var(--theme-info-foreground);
+}
+.alert-info {
+    background-color: var(--theme-info-background);
+    color: var(--theme-info-foreground);
+}
+.alert-warning {
+    background-color: var(--theme-warning-background);
+    color: var(--theme-warning-foreground);
+}
+.alert-danger {
+    background-color: var(--theme-error-background);
+    color: var(--theme-error-foreground);
+}
+
+</style>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css">
+<link href="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+<style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        <style>
+.task-list-item {
+    list-style-type: none;
+}
+
+.task-list-item-checkbox {
+    margin-left: -20px;
+    vertical-align: middle;
+    pointer-events: none;
+}
+</style>
+        
+    </head>
+    <body class="vscode-body vscode-light">
+        <hr>
+<h2 id="usepackagenottoctocbibind">\usepackage[nottoc]{tocbibind}</h2>
+<h1 id="table-of-contents">Table of Contents</h1>
+<p><a href="#-the-full-stack-lab-series---classic-stack-">🥼 The Full-stack Lab Series - (<em>Classic-stack</em>) 🦄</a></p>
+<ul>
+<li><a href="#table-of-contents">Table of Contents</a></li>
+<li><a href="#-the-full-stack-lab-series---classic-stack"><img src="file:////Users/andrewdurham/github.com/regis/MSSE-695-SE-RD/icons8-swiss-army-knife-64.png" alt="Swiss Army Knife" /> The Full-stack Lab Series - <em>'Classic-stack'</em></a></li>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#lab-series-organization--structure">Lab Series Organization &amp; Structure</a>
+<ul>
+<li><a href="#overview-of-labs">Overview of labs</a></li>
+<li><a href="#recipes-">Recipes 📒</a></li>
+<li><a href="#field-book-">Field-book 📓</a></li>
+<li><a href="#full-stack-architecture">Full Stack Architecture</a>
+<ul>
+<li><a href="#early-developments">Early Developments</a>
+<ul>
+<li><a href="#extensibility">Extensibility</a></li>
+<li><a href="#php">PHP</a></li>
+<li><a href="#java-script">Java Script</a></li>
+</ul>
+</li>
+<li><a href="#3-tier-architecture">3-Tier Architecture</a></li>
+<li><a href="#stacks">Stacks</a></li>
+<li><a href="#iaas-saas">IaaS, SaaS,</a></li>
+</ul>
+</li>
+<li><a href="#continuous-integration-and-delivery-cicd">Continuous Integration and Delivery (CI/CD)</a></li>
+</ul>
+</li>
+<li><a href="#lab-i---linux-server-virtual-install-">Lab I - Linux Server Virtual Install 🔬</a>
+<ul>
+<li><a href="#introduction-1">Introduction</a></li>
+<li><a href="#purpose">Purpose</a></li>
+<li><a href="#objectives">Objectives</a></li>
+<li><a href="#div-stylepage-break-after-alwaysdiv"><div style="page-break-after: always;"></div></a></li>
+<li><a href="#-recipe-10--installing-ubuntu-server-on-virtual-machine-">## Recipe 1.0: 📒 Installing Ubuntu Server on Virtual Machine 📒</a>
+<ul>
+<li><a href="#overview">Overview</a></li>
+<li><a href="#9-steps">9 Steps</a></li>
+<li><a href="#important-commands">Important Commands</a>
+<ul>
+<li><a href="#restart-server">Restart Server</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#lab-ii---linux-server-install-and-configuration-">Lab II - Linux Server Install and Configuration 🔬</a>
+<ul>
+<li><a href="#introduction-2">Introduction</a></li>
+<li><a href="#purpose-1">Purpose</a></li>
+<li><a href="#objectives-1">Objectives</a></li>
+<li><a href="#note-for-full-stack-development-we-follow-three-stages-of-configuration-management-planning-building-testing--repeat"><strong><em>NOTE.</em></strong> <em>For full-stack development, we follow three stages of configuration management: Planning, Building, Testing.  Repeat.</em></a></li>
+<li><a href="#-recipe-20--installing-ubuntu-server-on-metal-">## Recipe 2.0: 📒 Installing Ubuntu Server on Metal 📒</a></li>
+<li><a href="#overview-1">Overview</a></li>
+<li><a href="#15-steps">15 Steps</a>
+<ul>
+<li><a href="#important-commands-1">Important Commands</a>
+<ul>
+<li><a href="#restart-server-1">Restart Server</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#-recipe-21--server---network-configurations-">## Recipe 2.1: 📒 Server - Network Configurations 📒</a></li>
+<li><a href="#overview-2">Overview</a></li>
+<li><a href="#6-steps">6 Steps</a>
+<ul>
+<li><a href="#important-commands-2">Important Commands</a>
+<ul>
+<li><a href="#access-netplan-configuration-file">Access netplan configuration file</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#3-httpsyamlorg">3. <a href="https://yaml.org/">https://yaml.org/</a></a></li>
+<li><a href="#-recipe-22--server-security-hardening--ssh-configuration-">## Recipe 2.2: 📒 Server Security, Hardening &amp; SSH Configuration 📒</a></li>
+<li><a href="#overview-3">Overview</a></li>
+<li><a href="#17-steps">17 Steps</a>
+<ul>
+<li><a href="#ssh-configuration-and-hardening">SSH Configuration and Hardening</a>
+<ul>
+<li><a href="#access-ssh-configuration-files">Access SSH Configuration files.</a></li>
+<li><a href="#create-non-root-user-with-sudo-privileges">Create non-root user with sudo privileges.</a></li>
+</ul>
+</li>
+<li><a href="#uncomplicated-firewall-ufw-configuration">Uncomplicated Firewall (UFW) Configuration</a>
+<ul>
+<li><a href="#configure-authentication-key-pair">Configure Authentication Key pair.</a></li>
+<li><a href="#logon-to-server-using-ssh-keys">Logon to Server using SSH Keys.</a></li>
+</ul>
+</li>
+<li><a href="#disabling-ssh-password-authentication">Disabling SSH Password Authentication</a></li>
+</ul>
+</li>
+<li><a href="#summary">Summary</a>
+<ul>
+<li><a href="#important-commands-3">Important Commands</a>
+<ul>
+<li><a href="#access-netplan-configuration-file-1">Access netplan configuration file</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#-recipe-23--ubuntu-server---security-hardening-contd-fail2ban-whitelisting-security-banner">## Recipe 2.3: 📒 Ubuntu Server - Security Hardening (Cont'd.): Fail2ban, Whitelisting, Security Banner</a></li>
+<li><a href="#overview-4">Overview</a></li>
+<li><a href="#-steps">?? Steps</a>
+<ul>
+<li><a href="#installing-and-configuring-fail2ban">Installing and Configuring Fail2Ban</a></li>
+<li><a href="#whitelisting-ip-addresses">Whitelisting IP Addresses</a></li>
+<li><a href="#installing-security-banner">Installing Security Banner</a></li>
+<li><a href="#and-">and ...</a></li>
+<li><a href="#and--1">and ...</a></li>
+</ul>
+</li>
+<li><a href="#10-end-of-recipe">10. <strong><em>End of Recipe</em></strong></a></li>
+<li><a href="#-recipe-24--server---security-hardening-contd-virtual-private-network-vpn">## Recipe 2.4: 📒 Server - Security Hardening (Cont'd.): Virtual Private Network (VPN)</a></li>
+<li><a href="#overview-5">Overview</a></li>
+<li><a href="#14-steps">14 Steps</a>
+<ul>
+<li><a href="#before-installation">Before installation</a></li>
+<li><a href="#installation">Installation</a></li>
+<li><a href="#important-commands-4">Important Commands</a>
+<ul>
+<li><a href="#startstoprestartstatus">Start/Stop/Restart/Status</a></li>
+<li><a href="#secure-copy-protocol-scp">Secure Copy Protocol (SCP)</a></li>
+</ul>
+</li>
+<li><a href="#definitions">Definitions</a></li>
+<li><a href="#resources">Resources</a></li>
+</ul>
+</li>
+<li><a href="#recipe--server---never-finished---security-hardening-">Recipe: 📒 Server - 'Never Finished' - Security Hardening 📒</a></li>
+<li><a href="#recipe--ubuntu-server---lamp-">Recipe: 📒 Ubuntu Server - LAMP 📒</a></li>
+</ul>
+</li>
+<li><a href="#lab-iii---linux-server---services-webservers-and-databases-">Lab III - Linux Server - Services, Webservers and Databases 🔬</a></li>
+<li><a href="#lab-iv---application-design--development-">Lab IV - Application Design &amp; Development 🔬</a></li>
+<li><a href="#lab-v---applications-design-and-development">Lab V - Applications Design and Development🔬</a></li>
+<li><a href="#lab-vi---uiux-">Lab VI - UI/UX 🔬</a></li>
+<li><a href="#lab-vii---uiux-">Lab VII - UI/UX 🔬</a></li>
+<li><a href="#appendices">Appendices</a>
+- <a href="#volumetric-analysis">Volumetric Analysis</a>
+- <a href="#gravimetric-analysis">Gravimetric Analysis</a></li>
+<li><a href="#references">References</a>
+<ul>
+<li>
+<p><a href="#-9-------------">| 9    |     |    |</a></p>
+</li>
+<li>
+<p><a href="#recipe--ubuntu-server---ssh-configuration-">Recipe: 📒 Ubuntu Server - SSH Configuration 📒</a></p>
+</li>
+<li>
+<p><a href="#recipe--ubuntu-server---security-hardening-">Recipe: 📒 Ubuntu Server - Security Hardening 📒</a></p>
+</li>
+<li>
+<p><a href="#recipe--ubuntu-server---vpn-configuration">Recipe: 📒 Ubuntu Server - VPN Configuration</a></p>
+</li>
+<li>
+<p><a href="#recipe--ubuntu-server---lamp-">Recipe: 📒 Ubuntu Server - LAMP 📒</a></p>
+</li>
+</ul>
+</li>
+<li><a href="#lab-iii---linux-srver---services-webservers-and-databases-">Lab III - Linux Srver - Services, Webservers and Databases 🔬</a></li>
+<li><a href="#lab-iv---application-design--development-">Lab IV - Application Design &amp; Development 🔬</a></li>
+<li><a href="#lab-v---applications-design-and-development">Lab V - Applications Design and Development🔬</a></li>
+<li><a href="#lab-vi---uiux-">Lab VI - UI/UX 🔬</a></li>
+<li><a href="#lab-vii---uiux-">Lab VII - UI/UX 🔬</a></li>
+<li><a href="#appendices">Appendices</a>
+- <a href="#volumetric-analysis">Volumetric Analysis</a>
+- <a href="#gravimetric-analysis">Gravimetric Analysis</a></li>
+<li><a href="#references">References</a></li>
+</ul>
+<ol>
+<li>Appendices](#Appendices-1)</li>
+</ol>
+<ul>
+<li><a href="#subsection-a">Lab-report Write-up Instructions</a></li>
+<li><a href="#subsection-a">Field-book Build Build Instructions</a></li>
+<li><a href="#subsection-a">Linux for Software Engineers Handbook</a></li>
+</ul>
+<div style="page-break-after: always;"></div>
+<h1 id="-the-full-stack-lab-series---classic-stack"><img src="file:////Users/andrewdurham/github.com/regis/MSSE-695-SE-RD/icons8-swiss-army-knife-64.png" alt="Swiss Army Knife" /> The Full-stack Lab Series - <em>'Classic-stack'</em></h1>
+<!--🦄 --> 
+<!-- <figure>
+  <img src="file:////Users/andrewdurham/github.com/regis/MSSE-695-SE-RD/icons8-swiss-army-knife-64.png" alt="Swiss Army Knife" />
+   <figcaption>Fig: Swiss Army Knife</figcaption>
+</figure> --> 
+<h1 id="introduction">Introduction</h1>
+<p>The <em>full-stack</em> lab series <em>classic-stack</em> is a sequence of ten laboratory investigations I created to teach and demonstrate the design, building, and deployment of full-stack architectures. The first architecture in this series is the <em>LAMP/LEMP</em> stack; what will be refered to here as <em>classic full-stack</em> or simply <em>classic-stack</em>. It is <em>classic</em> because it is mature, has: ample documentation; publically-availalbe components; examples and code base; and a large community of users who support its use.<br>
+<strong><em>NOTE.</em></strong> <em>This is not to say that other architectures do not meet these similar definitions, just that the <em>classic-stack</em> we will study here is <em>classic</em> for at least these reasons.</em></p>
+<h1 id="lab-series-organization--structure">Lab Series Organization &amp; Structure</h1>
+<p>This is where you say things like ...we are going to first explore linux server administration. Specifically, we will ...</p>
+<ul>
+<li>Stage I - Linux Server Admin &amp; Security
+<ul>
+<li>Webservers</li>
+<li>Database Servers</li>
+</ul>
+</li>
+<li>Stage II - Building and Managing Multi-server Environments
+<ul>
+<li>Implementing Enterprise Software Services</li>
+<li>Cloud Architecture</li>
+</ul>
+</li>
+<li>Stage III - Web-based Software applications
+<ul>
+<li>Design</li>
+<li>Development</li>
+<li>Testing</li>
+<li>Deploying</li>
+</ul>
+</li>
+<li>Stage IV -
+Web-application Development and Deployment</li>
+</ul>
+<h2 id="overview-of-labs">Overview of labs</h2>
+<h2 id="recipes-">Recipes 📒</h2>
+<p>The recipes that are presented in the full-stack lab series are an authoritative set of instructions for <em>real</em> full-stack engineering <em>builds</em>. The builds encountered in the recipes will span the full-stack spectrum. The four domains we study in this series are Linux server administration and security; webserver and database integration and deployemnt; and front-end components and frameworks. The recipes have been tested and are specific problem-based, hands-on endeavors which have a declared build and test outcome. The recipes have are not easy, per se, they are desinged to be challenging. The recipes are a sub-sets of <em>Lab Investigations</em> and are used as a guide. Just like recipes you might follow for cooking, the recipes used here include specific instructions, build times, materials, equipment, and environment details. And, just like how recipes might be followed for cooking in the kitchen, the final product, in this case - build, is not always identical to what was described in the recipe. And, just like recipes followed in the kitchen, it may take several iterations to arrive at the final build of your liking.This is the nature of any craft. In other words, there will likely be modifications made or deviations from the exact instructions as you prepare your build. Take good notes in your field-book and be ready to someday soon write your own recipes!<br>
+<strong><em>NOTE.</em></strong> <em>The recipes have been written and <em>tested</em>. You can assume to a high level of certainty that the information and instructions are authoritative.</em><br>
+<strong><em>NOTE.</em></strong> <em>The icon used to symbolize recipes is an image of a spiral-bound, not bound, book.</em></p>
+<h2 id="field-book-">Field-book 📓</h2>
+<p>(refer to field book instructions and videos)</p>
+<h2 id="full-stack-architecture">Full Stack Architecture</h2>
+<h3 id="early-developments">Early Developments</h3>
+<p>Modern day web software is based on a series of technologies which have evolved over decades and includes a progression in technological development and innovation. And while there were major developoments over the last twenty years in computing and networking technolgies which are commonplace today, I am going to provide a brief history of web-software architecture in an effort to explain the emergence of and future of full stack as we know it today. In part, the web-software we experience today originated from developments in network and internet technologies, databases, as well as server-side and client-side technologies. For instance, in the early part of the twenty first century, most software was being developed to be installed on a client machine. While there was an early form of internet, including websites and portals which could be accessed via web-browser, these services were largely decoupled from the client-side application. The underlying language behind web-applications of that time were based on HTML (i.e., hypertext markup language), for which extensible variants emerged.</p>
+<h4 id="extensibility">Extensibility</h4>
+<p>In the early part of this century, extensible language variants emerged like XHTML (i.e., extensible hypertext markup language), and now XML. These developments allowed for web-pages to be broken into smaller components, and these components could interact with a webserver independently and asynchronously. The underlying technology became known as (AJAX) (i.e., asynchronous Java Script and XML). Extensbility, therefore allowed for an evolution in architecture where the <em>states</em> of elements of a given webpage could change based on user interaction. As we will see in a moment, the <em>view</em> layer in full stack architectures is based on this.</p>
+<h4 id="php">PHP</h4>
+<p>Parallel to this was the development of scripting languages, like PHP. Before PHP, there were SQL (i.e., structured query language) databases and (RDMS) (i.e., relational database management servers). However, they were largely designed to be either server-side or client-side, and were not largely accessible through web applications. This changed, however with development of scripting languages like PHP. These scripting languages allowed web application to interact with the SQL database (server-side). This meant the application could interact with the database in ways that allowed customizability which not possible before. This progression allowed for the evolution of what is now known as <em>database-driven</em> web applications. With respect to full stack architectures, the <em>model</em> and <em>controller</em> are based on this progression. It should be noted, that while PHP scrips are used in conjunction with HTML, their function is largely server-side. Therefore, PHP is categorized as a server-side scripting language.</p>
+<h4 id="java-script">Java Script</h4>
+<p>Java Script, on the other hand is a client-side scripting language. The evolution of Java Script also took place during the early part of this century and has a history worth studying. However, the focus of this work here is on how full-stack architectures and the underlying technolgies and methods which support them. JavaScript is a dominant client-side scripting language and an essential technology for full-stack applications because of its utilities to control and manage interfaces, user interactions and experiences(UI/UX). In most full-stack applications, JavaScript represents the majority of the code-base for what is referred to as the <em>front-end</em> of the application. The <em>front-end</em> consists of more than just JavaScript, yet the client-side scripting is largely handled by JavaScript implementations.</p>
+<h3 id="3-tier-architecture">3-Tier Architecture</h3>
+<p>The exact form the evolution from HTML to XML and scripting languages took place is not essential here. What is important, however, is the dominant architecture that emerged from this progression. Most contemporary web applications are based on a <em>3-Tier architecture</em> or <em>MVC</em> (Model, View, Controller) pattern.</p>
+<figure>
+  <img src="file:////Users/andrewdurham/github.com/regis/MSSE-695-SE-RD/3TierMVC.png" alt="3-Tier Architecture and MVC Pattern" />
+  <figcaption>Fig: 3-Tier Architecture and MVC Pattern</figcaption>
+</figure>
+<p>As is shown in the figure above, a 3-Tier architecture is comprised of client, business logic, and database tiers. The client tier is considered the <em>front-end</em> and consists of the UI/UX components which are represented by HTML, CSS and JS. This tier is accessible to the user through a browser. This tier sends HTTP requests to the business logic layer and receives instructions for HTML pages to be built and viewed.The business-logic tier represents the <em>back-end</em> of the applciation. It is comprised of the webserver and application server. For our purposes in the <em>classic</em> full-stack series, the webserver will be either <em>Apache2</em> or <em>NGinx</em> (pronounced &quot;engine-X&quot;). Furthermore, the server on which the web-server and application server will be built will be Linux, either <em>metal</em> or <em>VPS</em> (virtual private server). The database tier is comprised of a database and a database server. For our purposes, the database will be of SQL (structured query language), in the form of MySQL or MariaDB. The database and database server are also considered part of the <em>back-end</em> of the application. For our study here, the database and database server will also be installed and configured on Linux server(s). The database tier can also be though to be part of the <em>back-end</em> of the application. For a more detailed account of software architectures, refer to <em>(Pyatt, 2018) Software Architecture Essentials</em>.<br>
+<strong><em>NOTE.</em></strong> The application server and the web-server may be the same in some designs.</p>
+<h3 id="stacks">Stacks</h3>
+<p>Collectively, the client tier, business logic tier and databse tier comprise what is referred to as the <em>stack</em>. Here we will be designing, building and deploying <em>LAMP</em> and <em>LEMP</em> stacks (Linux, Apache2, MySQL, PHP) and (Linux, NGinx, MySQL, PHP), respectively. There are other stacks which are available, like MEAN (Mongo, Express, AngularJS, NodeJS) and MERN (Mongo, Express, React, NodeJS). Our focus here will be <em>classic</em> stack development. The rationale for this is that a great many web-applications, over 80% as of this writing, are based on LAMP. Therefore, we will first build applications using a well known and establised architecture.</p>
+<h3 id="iaas-saas">IaaS, SaaS,</h3>
+<h2 id="continuous-integration-and-delivery-cicd">Continuous Integration and Delivery (CI/CD)</h2>
+<div style="page-break-after: always;"></div>
+<h1 id="lab-i---linux-server-virtual-install-">Lab I - Linux Server Virtual Install 🔬</h1>
+<h2 id="introduction">Introduction</h2>
+<p>The <em>classic</em> full-stack architecture is referred to as a <em>LAMP stack</em>. This is a Linux server environment with an Apache2 webserver, a MySQL database, and a PHP backend. Due the the ubiquitous nature of PHP and MySQL, this remains an essential stack to master. Whether the server(s) are your <em>metal</em> or <em>metal</em> you are licensing  (i.e., VPS - virtual private servers) we will design, build and test Linux servers in the following lab. The classic full-stack is omnipresent. As of this writing, approximately 80% of web applications are runnning PHP (<a href="https://w3techs.com/technologies/details/pl-php">https://w3techs.com/technologies/details/pl-php</a>), and over 75% of databases used for web applications are MySQL. Furthermore, over 96% of servers in the world are running Linux OS in some form, either Debian (Ubuntu) or Fedora (CentOS). There are other <em>flavors</em> as well but we are focusing on Ubuntu Server here. I could make the case further for the importance of this stack, however, I will turn my focus on the design and build of this architecture, including how to build, deploy and test applications running in it.</p>
+<p>Modern equivalents of this stack use MariaDB, in place of MySQL (they are equivalent for our purpose here), and NGinx, (pronounced &quot;engine-X&quot;), a load-balancing technology, as the webserver. In which case the stack is referred to as <em>LEMP</em>. For our purposes, we will be exploring the LAMP/LEMP stack as our system architecture. We will develop database-driven web applications using one or more Linux servers. In these cases, the LAMP/LEMP will be comprised, at a minimum, of a <em>Linux server</em>; <em>Webservers</em> (Apache2 and NGinx), <em>SQL Database servers</em>, and <em>Front-end components</em> (HTML, CSS, JS.</p>
+<p>In this lab, we will begin exploring how to configure and deploy a Linux server as an environment to host database-driven web applications. We will first begin by installing and configuring Linux server, specifically Ubuntu Server, on a virtual machine.</p>
+<p>[^2]: insert architecture image from pyatt &amp; lotfy]. In this lab, we are going to investigate how to install and configure a Linux server  (Ubuntu Server) to run on a virtual machine. This is prerequisite knowledge for the next lab where we will investigate how to install and configure a Linux server on <em>metal</em>.</p>
+<p>[^1]: In the software engineering community there is concern that MySQL may eventually be licensed and no longer &quot;free&quot;. As such, MariaDB, which is a <em>fork</em> of MySQL has also become popular as an SQL database. Both MySQL and MariaDB install in similar fashion on Linux OS.
+[^2]: Linux systems are based on one of two varieties. Debian is the kernel architecture for variants like Debian, while Fedora is akin to variants like Cent OS.</p>
+<h2 id="purpose">Purpose</h2>
+<p>The purpose of this lab is to investigate and explore how to install, configure, and deploy Linux OS on a virtual machine. Through this you will gain familiarity with this environment so you can begin designing and developing software in a Full-stack environment.</p>
+<h2 id="objectives">Objectives</h2>
+<ol>
+<li>Complete a 1-page design sketch.</li>
+<li>Successfully complete installation of Linux server along with preliminary configurations:</li>
+</ol>
+<ul>
+<li>Partitioning drives with LVM;</li>
+<li>Network Configurations (netplan, static ip, dns);</li>
+<li>Remote access (ssh, vpn);</li>
+<li>User management;</li>
+<li>Security (fail2ban; migrating from ssh to VPN; LAMP).</li>
+</ul>
+<ol start="2">
+<li>Record progress and observations in fieldbook 📓.</li>
+<li>Begin preparations for Lab-report which will be completed after <em>Lab II</em>.<br>
+<strong><em>NOTE.</em></strong> <em>For full-stack development, we follow three stages of configuration management: Planning, Building, Testing, Repeat. Consider the work for this lab to be in planning and building stages.</em></li>
+</ol>
+<div style="page-break-after: always;"></div>
+---
+## Recipe 1.0: 📒 Installing Ubuntu Server on Virtual Machine 📒
+---
+*Date:* Jan 15, 2020\
+*Author:* Kevin Pyatt\
+*Category:* VM, Ubuntu Server Installation\
+*Keywords:* server installation, virtual machine, ubuntu server\
+*Hardware:* Desktop/Laptop PC, Mac or Pi\
+*Software:* Linux, Windows or Mac OS, Virtual Box\
+*Preliminary:* Review the following authoritative materials in preparation for Lab.
+1. Installation guide for Ubuntu Server OS: https://help.ubuntu.com/lts/serverguide/index.html\
+and/OR\
+b. https://www.ubuntufree.com/ubuntu-18-04-server-guide/
+2. Installation guide for Virtual box: https://www.virtualbox.org/manual/
+<h3 id="overview">Overview</h3>
+<p>A great way to learn about Ubuntu Server is to build a virtual machine that can be configured to meet the design goals of a prototypical system. Prior to deploying Ubuntu Server onto metal a first step is to configure the OS in a Virtual Machine (VM) environment. In this recipe I show how to install Ubuntu Server on a VM.</p>
+<h3 id="9-steps">9 Steps</h3>
+<ol>
+<li>Install and configure a virtual machine on your local development machine[^3]. In this recipe we are using Virtual Box.</li>
+<li>Download <em>.iso</em> for Ubuntu Server. In this recipe we are using Ubuntu Server 18.04 LTS, although as of this writing LTS 20 is also avaialble. Pay attention to the directory in which this install is saved to. On a Linux machine it will be:
+<code>$/Downloads</code></li>
+<li>Create a virtual machine and name it. Complete steps using defaults, unless there are specifications you need to follow which are different from default settings.<br>
+<strong><em>NOTE.</em></strong>  When prompted for partition type, choose LVM. We choose this option because this allows flexibility to resize partitions after install if need be.</li>
+<li>Start Virtual Machine that you created. When prompted to select OS, choose the <em>.iso</em> for Ubuntu Server you saved previously.</li>
+<li>Follow steps for install of Ubuntu Server. Use defaults, unless specifications for your project declare otherwise. Take good notes on settings and configurations you used for installation.</li>
+<li>Complete installation and restart machine. <code>$sudo shutdown now -r</code></li>
+<li>Continue to review installation guide for Ubuntu Server OS which is referenced above.</li>
+<li>Explore, configure, test, document.</li>
+<li><strong><em>End</em> of recipe.</strong></li>
+</ol>
+<hr>
+<p>[^3]: Development machine - the development machine you use for full-stack development should be a Linux environment, preferably Ubuntu, as the examples used in these labs are of this variety. While it is possible to configure your development environment to run a dual-boot configuration where one of the two OS is Linux, I highly recommend having one dedicated environment to run Linux.</p>
+<h3 id="important-commands">Important Commands</h3>
+<h4 id="restart-server">Restart Server</h4>
+<p><code>$sudo shutdown now -r &lt;--- restart server</code></p>
+<p><strong>Definitions:</strong><br>
+LTS
+: Long term support is a phrase used to describe the future support and continued research and development in and for a given operating system. In this case, Ubuntu. LTS versions are considered stable, are <em>patched</em>, which enhances security, and have a component and driver library that is frequently updated and maintained.<br>
+VPS
+: Virtual Private Server - this is a server that you pay a fee to access, control and configure.</p>
+<p><strong>Resources:</strong></p>
+<ol>
+<li><a href="https://help.ubuntu.com/lts/serverguide/index.html">https://help.ubuntu.com/lts/serverguide/index.html</a></li>
+<li><a href="https://www.ubuntufree.com/ubuntu-18-04-server-guide">https://www.ubuntufree.com/ubuntu-18-04-server-guide</a></li>
+<li><a href="https://www.virtualbox.org/manual">https://www.virtualbox.org/manual</a></li>
+</ol>
+<h1 id="lab-ii---linux-server-install-and-configuration-">Lab II - Linux Server Install and Configuration 🔬</h1>
+<h2 id="introduction">Introduction</h2>
+<p>As we saw previously, the <em>classic</em> full-stack architecture is referred to as a <em>LAMP stack</em>. This is a Linux server environment with an Apache2 webserver, a MySQL database, and a PHP backend. Modern equivalents of this stack use MariaDB, in place of MySQL (they are equivalent for our purpose here), and NGinx, (pronounced &quot;engine-X&quot;), a load-balancing technology, as the webserver. In which case the stack is referred to as <em>LEMP</em>. For our purposes, we will be exploring the LAMP/LEMP stack as our system architecture. We will build database-driven web applications on these systems. For our purposes, the LAMP/LEMP will be comprised, at a minimum, of a <em>Linux server</em>; <em>Webservers</em> (Apache2 and NGinx), <em>SQL Database servers</em>, and <em>Front-end components</em> (i.e., HTML, CSS, JS).<br>
+In this lab, we will begin exploring how to configure and deploy a Linux server as an environment to host database-driven web applications. We will continue this investigation further by installing and configuring Linux server, specifically Ubuntu Server, on <em>metal</em>.</p>
+<h2 id="purpose">Purpose</h2>
+<p>The purpose of this lab is to explore and gain mastery of the process neded to install and configure a Linux server.</p>
+<h2 id="objectives">Objectives</h2>
+<ol>
+<li>Successfully complete installation of Linux server along with preliminary configurations:</li>
+</ol>
+<ul>
+<li>Partitioning drives with LVM;</li>
+<li>Network Configurations (netplan, static ip, dns);</li>
+<li>Remote access (ssh, vpn);</li>
+<li>User management;</li>
+<li>Security (fail2ban; migrating from ssh to VPN; LAMP).</li>
+</ul>
+<ol start="2">
+<li>Record progress and observations in field-book📓.</li>
+<li>Complete, present and submit for review a lab report.<br>
+<strong><em>NOTE.</em></strong> <em>For full-stack development, we follow three stages of configuration management: Planning, Building, Testing.  Repeat.</em></li>
+</ol>
+<hr>
+<h2 id="recipe-20--installing-ubuntu-server-on-metal-">Recipe 2.0: 📒 Installing Ubuntu Server on Metal 📒</h2>
+<hr>
+<p><em>Date:</em> Nov 27, 2020<br>
+<em>Author:</em> Kevin Pyatt<br>
+<em>Category:</em> VM, Ubuntu Server Installation<br>
+<em>Keywords:</em> server installation, Infrastructure as a service (IaaS), ubuntu server<br>
+<em>Hardware:</em> Desktop/Laptop PC, Mac or Pi, modem and router conected to internet<br>
+<em>Software:</em> Linux<br>
+<em>Preliminary:</em></p>
+<ul>
+<li>Review the following authoritative materials in preparation for Lab.\</li>
+</ul>
+<ol>
+<li>Installation guide for Ubuntu Server OS:</li>
+</ol>
+<ul>
+<li><a href="https://help.ubuntu.com/lts/serverguide/index.html">https://help.ubuntu.com/lts/serverguide/index.html</a>
+and/or</li>
+<li><a href="https://www.ubuntufree.com/ubuntu-18-04-server-guide">https://www.ubuntufree.com/ubuntu-18-04-server-guide</a></li>
+</ul>
+<ol start="2">
+<li>Installation guide for Virtual box: <a href="https://www.virtualbox.org/manual">https://www.virtualbox.org/manual</a></li>
+</ol>
+<ul>
+<li>Successfully complete installation of Ubuntu Server on Virtual Machine as described in Recipe: &quot;Installing Ubuntu Server on Virtual Machine&quot;[insert hyperlink to this document].</li>
+</ul>
+<h2 id="overview">Overview</h2>
+<p>We are now ready to begin an installation of Ubuntu Server on <em>metal</em>. In the following recipe we are going to go through the steps to install and configure Ubuntu Server on a server we have access to and can configure to our liking. This recipe just handles the installation of Ubuntu Server OS.<br>
+<strong><em>NOTE.</em></strong> <em>Depending on the full-stack architecture you are building, it may also be appropriate to, instead of using your own <em>metal</em>, use a Virtual Private Server (VPS). However, in the first examples used in this guide, we are going to configure on our own <em>metal</em>.</em></p>
+<h2 id="15-steps">15 Steps</h2>
+<ol>
+<li>Download .iso for Ubuntu OS; see: (<a href="https://releases.ubuntu.com/20.04/">https://releases.ubuntu.com/20.04/</a>). Create USB installation drive. <strong><em>NOTE.</em></strong> <em>If you are already using a Linux environment, you can simply download the .iso to your Linux development machine and use the <em>startup disk creator</em> tool which is likely already installed. If not, you can install this tool from the repository specific to your OS. If you are using Windows or Mac OS you can use a similar tool to create startup disk for .iso.</em></li>
+<li>Select language. If prompted for new installer, select install now or later.</li>
+<li>Select keyboard layout.</li>
+<li>Configure interface for server (i.e., enp0s3). Record this value for later.</li>
+<li>Proxy configuration - skip this step.</li>
+<li>Ubuntu archive mirror configuration - leave default mirror address unless otherwise specified.</li>
+<li>Guided storage configuration - use entire disk, set-up LVM group. We will not encrypt storage on this install.</li>
+<li>Storage configuration , review summary and continue.</li>
+<li>Confirm destructive action.</li>
+<li>Profile Setup - username; servername; password.</li>
+<li>SSH Setup - select option to install OpenSSH server.</li>
+<li>Featured Server Snaps - we are going to skip this step.</li>
+<li>Installing system - this will take a bit of time. You can view log files to study what is happening on the server. Once complete reboot. You will be prompted to remove installation media. Do so, and continue with reboot.<br>
+<strong><em>NOTE.</em></strong> If not prompted for rebot, simply issue the folloing terminal command: <code>$sudo shutdown now -r</code></li>
+<li>Login to server.</li>
+<li><strong><em>End</em> of recipe.</strong></li>
+</ol>
+<h3 id="important-commands">Important Commands</h3>
+<h4 id="restart-server">Restart Server</h4>
+<p><code>$sudo shutdown now -r &lt;--- restart server</code></p>
+<p><strong>Definitions:</strong><br>
+LVM - Logical volume management is a technology for partitioning and configuring kernels and drives on servers which allows for dynamic state changes where the volume sizes which are initially partiioned can be mdified over time. This type of partitioning management is preferred as it enhances sustainiability of server system. <br>
+SSH - Secure shell is a server-side technology which allows for remote access from clients to server. SSH is configured through a series of steps which can enable allowing client-access to the server through a dedicated port, typically port:22. While allowing access to servers through SSH poses security risks, there are steps which can be taken to limit access, and enhance security. These include, changing port number, enabling password-less access, enabling end-to-end encryption and white-listing known ip addresses.</p>
+<p>LTS - Long term support is a phrase used to describe the future support and continued research and development in and for a given operating system. In this case, Ubuntu. LTS versions are considered stable, are <em>patched</em>, which enhances security, and have a component and driver library that is frequently updated and maintained.<br>
+VPS - Virtual Private Server - this is a server that you pay a fee to access, control and configure.</p>
+<p><strong>Resources:</strong></p>
+<ol>
+<li><a href="https://help.ubuntu.com/lts/serverguide/index.html">https://help.ubuntu.com/lts/serverguide/index.html</a></li>
+<li><a href="https://www.ubuntufree.com/ubuntu-18-04-server-guide">https://www.ubuntufree.com/ubuntu-18-04-server-guide</a></li>
+</ol>
+<hr>
+<h2 id="recipe-21--server---network-configurations-">Recipe 2.1: 📒 Server - Network Configurations 📒</h2>
+<hr>
+<p><em>Date:</em> Nov 28, 2020<br>
+<em>Author:</em> Kevin Pyatt<br>
+<em>Category:</em> Ubuntu Server Installation, Network Configurations<br>
+<em>Keywords:</em> server installation, ubuntu server, network configurations, static ip<br>
+<em>Hardware:</em> Desktop/Laptop PC, Mac or Pi, modem and router conected to internet\
+<em>Software:</em> Linux<br>
+<em>Preliminary:</em> Review the following authoritative materials in preparation for Lab.\</p>
+<ol>
+<li>Installation guide for Ubuntu Server OS: <a href="https://help.ubuntu.com/lts/serverguide/index.html">https://help.ubuntu.com/lts/serverguide/index.html</a></li>
+</ol>
+<ul>
+<li>Before starting this recipe, complete Ubuntu Server installation as described in Recipe: &quot;Installing Ubuntu Server on Metal&quot;.</li>
+</ul>
+<h2 id="overview">Overview</h2>
+<p>At this point we are ready to set-up and configure networking for our Ubuntu Server. Specifically, we will be setting up a <em>static ip</em> configuration so that our server can be accessed for services we anticipate to build out in our full-stack environment. This recipe describes how to setup and configure netplan for static ip on our Ubuntu Server.</p>
+<h2 id="6-steps">6 Steps</h2>
+<ol>
+<li>Configure static IP address using Netplan.</li>
+</ol>
+<ul>
+<li>Get the ethernet name of network device used on our server
+<code> $ip a</code>
+In the example used here our ethernet name is <em>enp2s0</em>.</li>
+</ul>
+<ol start="2">
+<li>Access and list the contents of the netplan directory:
+<code>$cd /etc/netplan</code>
+<code>$ls</code></li>
+</ol>
+<ul>
+<li>You should see the output resembling something similar to: <code>00-installer-config.yaml</code>. We can view the contents of this file in its default form:
+<code>$sudo nano 00-installer-config.yaml</code><br>
+<strong><em>NOTE.</em></strong> <em>Netplan is the 'new' configuration method for Linux server editions after 2018. The configuration files for netplan are .yaml extension. For more on .yaml, which actually stands for <em>&quot;YAML Ain't Markup Language&quot;</em> see <a href="https://yaml.org/">https://yaml.org/</a>.</em></li>
+</ul>
+<ol start="3">
+<li>We are going to create a <em>new</em> configuration file called <em>99-config.yaml</em>. We do this as follows from the /etc/netplan directory:
+<code>$sudo nano 99-config.yaml </code></li>
+</ol>
+<ul>
+<li>We will be prompted to enter information into this new file. We will enter the information shown below.<br>
+<strong><em>NOTE.</em></strong> <em>Use the ethernet name specific to the server you are configuring. The same is true with the addresses, gateways, and nameservers.</em></li>
+</ul>
+<pre><code>network:
+  version: 2
+  renderer: networkd
+  ethernets:
+    enp0s25:
+     dhcp4: no
+     dhcp6: no
+     addresses: [96.88.85.241/24]
+     gateway4: 96.88.85.246
+     nameservers:
+       search: [pyattcloud.net]
+       addresses: [96.88.85.241, 1.1.1.1]
+</code></pre>
+<ul>
+<li>Save the configuration and exit.</li>
+</ul>
+<ol start="4">
+<li>Restarting/testing networking. We are now going to test our netplan configuration using the this command:
+<code>$sudo netplan apply</code></li>
+</ol>
+<ul>
+<li>There should be no output after issuing this. If there is, then there is likely an error in the configuration. If this happens, issue the following command to debug: <code>$sudo netplan --debug apply</code><br>
+<strong><em>NOTE.</em></strong> The most common error that happens here is with spacing (i.e., two space indent for version, four spaces for interface name, etc...).</li>
+</ul>
+<ol start="5">
+<li>We have successfully completed network configuration for static ip on our Ubuntu server.</li>
+<li><strong><em>End</em> of recipe.</strong></li>
+</ol>
+<h3 id="important-commands">Important Commands</h3>
+<h4 id="access-netplan-configuration-file">Access netplan configuration file</h4>
+<p><code>$sudo nano 99-config.yaml </code></p>
+<p><strong>Definitions:</strong><br>
+YAML - this is a python extension in the form of .yaml that is used in Netplan configuration files in Linux. It stands for 'Ain't Markup Language' see <a href="https://yaml.org/">https://yaml.org/</a>.</p>
+<p><strong>Resources:</strong></p>
+<ol>
+<li><a href="https://help.ubuntu.com/lts/serverguide/index.html">https://help.ubuntu.com/lts/serverguide/index.html</a></li>
+<li><a href="https://www.ubuntufree.com/ubuntu-18-04-server-guide/">https://www.ubuntufree.com/ubuntu-18-04-server-guide/</a></li>
+<li><a href="https://yaml.org/">https://yaml.org/</a></li>
+</ol>
+<hr>
+<h2 id="recipe-22--server-security-hardening--ssh-configuration-">Recipe 2.2: 📒 Server Security, Hardening &amp; SSH Configuration 📒</h2>
+<hr>
+<p><em>Date:</em> Nov 28, 2020<br>
+<em>Author:</em> Kevin Pyatt<br>
+<em>Category:</em> Ubuntu Server Installation, Security Configurations<br>
+<em>Keywords:</em> server installation, ubuntu server, security configurations, ssl, sever hardening<br>
+<em>Hardware:</em> Desktop/Laptop PC, Mac or Pi, modem and router conected to internet\
+<em>Software:</em> Linux<br>
+<em>Preliminary:</em> Review the following authoritative materials in preparation for Lab.</p>
+<ol>
+<li>Installation guide for Ubuntu Server OS: <a href="https://help.ubuntu.com/lts/serverguide/index.html">https://help.ubuntu.com/lts/serverguide/index.html</a></li>
+<li>How to Harden your Ubuntu 18.04 Server <a href="https://medium.com/@BaneBiddix/how-to-harden-your-ubuntu-18-04-server-ffc4b6658fe7">https://medium.com/@BaneBiddix/how-to-harden-your-ubuntu-18-04-server-ffc4b6658fe7</a></li>
+</ol>
+<ul>
+<li>Before starting this recipe, complete Ubuntu Server installation as described in Recipe: &quot;Installing Ubuntu Server Network Configurations&quot;.</li>
+</ul>
+<h2 id="overview">Overview</h2>
+<p>At this point we now have an Ubuntu Server that is configured for static ip. And, this server also has OpenSSH installed, which will be the first way we will provide remote access to our server. In this recipe we will be setting up SSH access so that we can begin accessing our server remotely. Before we do, however, there are some preliminary security configurations we want to do before we make it <em>live</em>. In its current form, our server is vulnerable. If we go live now, our ip address will be discoverable and accessible from most any address in the world. Consequently it will be prone to <em>brute-force</em> attacks in a matter of minutes. Our server, therefore, is in what I refer to this as 🕸️ <em>white Spider</em> state <em>(see definition)</em>. And while there are a great many steps we can take to secure our server, there are <em>five</em> essential steps we are going to do right away, before we go live. This is our preliminary <em>hardening</em> or securing of our server. We will go into more depth on server security in later labs. <strong><em>NOTE.</em></strong> <em>In the near future, we will disable SSH, but we will want VPN set-up before we do this. So, we are going to setup SSH access, then VPN, then turn off SSH. In this recipe, however, we are only handling SSH.</em></p>
+<h2 id="17-steps">17 Steps</h2>
+<h3 id="ssh-configuration-and-hardening">SSH Configuration and Hardening</h3>
+<h4 id="access-ssh-configuration-files">Access SSH Configuration files.</h4>
+<ol>
+<li>The SSH configuration files that are installed on our initial server install are in /etc/ssh. Go ahead and list this directory to view contents.
+<code>$cd /etc/ssh </code>
+<code>$ls</code><br>
+<strong><em>NOTE.</em></strong> If for some reason OpenSSH was not installed, you can do so now by issuing the following command:<br>
+<code>$sudo apt-get install openssh-server</code></li>
+</ol>
+<ul>
+<li>You will see several files listed in the ssh directory. One in particular called: <em>sshd_config</em>. We are going to make a backup of this file in its original form by issuing the following command:<br>
+<code>$sudo cp /etc/ssh/sshd_config /etc/ssh/backup.ssh_config </code></li>
+<li>We are now ready to access the original <em>sshd_config</em> for modification using the following command from the /etc/ssh directory:<br>
+<code>$sudo nano sshd_config</code></li>
+<li>Review the information in this file as there is pertient information about SSH configurations to pay attention to.<br>
+<strong><em>NOTE.</em></strong> <em>Information in this file following <em>#</em> is commented out. So, for instance, as it shows now, <em>#Port 22</em> is commented out.</em></li>
+</ul>
+<ol start="2">
+<li>Change default port from 22 to something obscure, in this case, <em>6022</em>. This is an arbitrary number.<br>
+<strong><em>NOTE.</em></strong> <em>It is important to change the default SSH port. Potential hackers can easily scan servers for open ports, like 22. By changing this port it adds another layer of security, albeit minor.</em></li>
+</ol>
+<ul>
+<li>Delete the <em>#</em> sign to make the port active. Save changes and exit.<br>
+<strong><em>NOTE.</em></strong> <em>In later steps we will need to configure our firewall to allow access to this port.</em></li>
+</ul>
+<h4 id="create-non-root-user-with-sudo-privileges">Create non-root user with sudo privileges.</h4>
+<p>The reason for this is that the user <em>root</em> can easily be used upon which passwords could be guessed and access could be gained. We are going to remove password authentication in later steps to provide further protection.</p>
+<ol start="3">
+<li>Issue the following commands in terminal to add user and modify provileges to superuser (i.e., sudo).<br>
+<code>$sudo adduser &lt;username&gt;</code><br>
+<code>$sudo usermod -aG sudo &lt;username&gt;</code><br>
+<code>$su — &lt;username&gt;</code><br>
+<strong><em>NOTE.</em></strong> <em>Username should be uncommon. For a list of commonly hacked user names you can easily perform a web-search to get an idea. Use strong password here as well. Specifically, your password should meet the requirements for strength of 16 characters,including a variety of symbols, numbers, and upper and lower case letters. Here is an example of a strong password:  <em>@xd926A#vXLU&amp;a\f</em>. Consider using a password generator for this, here is one for example: <a href="https://passwordsgenerator.net/">https://passwordsgenerator.net/</a></em></li>
+</ol>
+<h3 id="uncomplicated-firewall-ufw-configuration">Uncomplicated Firewall (UFW) Configuration</h3>
+<p>UFW is a firewall technology that comes built in most Linux systems, including Ubuntu Server. The main function of UFW is to monitor access to our server via open ports. There are a great many other functions for which  UFW is responsible. Our main focus here will be port management. If you have followed the steps to this point, then the Ubuntu Server you are configuring does not currently have any open <em>ports</em>. It has a static ip configured, but the ports are likely blocked. This is because the default state of our server begins with <em>ports</em> closed. We have to open them. This will give us remote access. This is analagous to when you install a faucet in a sink, or a switch in a room, the default states are <em>off</em>, as in no water, or no electricity. The same is true with server ports, their default state is <em>off</em>, as in <em>no flow of electrons</em>. We want the <em>water</em> of our server to flow at this point.<br>
+<strong><em>NOTE.</em></strong> From a security architecture perspective, it is not good practice to open ports for SSH. It woud be prefered to use Virtual Private Network instead.<br>
+<strong><em>NOTE.</em></strong> The configuration directory for UFW is <code>$etc/ufw</code>. You can access this directory for further information regarding UFW configurations.</p>
+<ol start="4">
+<li>Check state of UFW. <code>$sudo systemclt status ufw</code><br>
+<strong><em>NOTE.</em></strong> One of the services that should have been installed when we installed our Ubuntu OS is UFW.</li>
+</ol>
+<!---<img src="file:////Users/andrewdurham/github.com/regis/MSSE-695-SE-RD/SystemCtlScreenDump.png"
+     alt="Screen shot of terminal output for UFW satus"
+     style="float: left; margin-right: 10px;" />
+-->
+<figure>
+  <img src="file:////Users/andrewdurham/github.com/regis/MSSE-695-SE-RD/SystemCtlScreenDump.png" alt="Screen shot of terminal output for UFW satus" />
+  <figcaption>Fig 1: Output of UFW Status</figcaption>
+</figure>
+<ol start="5">
+<li>Enable UFW. The output in the previous step showed UFW is active. Now we are going to see the default status of UFW with respect to ports. <code>$ufw status</code><br>
+If the output is <em>inactive</em>, then you will need to issue <em>enable</em> command. <code>$sudo ufw enable</code></li>
+</ol>
+<ul>
+<li>Generally speaking, after UFW is enabled, it does not restart until system restart. Therefore, we should also reload UFW for these changes to take effect. Here is how: <code>$sudo ufw reload  </code>.</li>
+</ul>
+<ol start="6">
+<li>Open SSH port. Now we are going to open up our SSH port. The default port for SSH is <em>port 22</em>. Based on our work in the previous recipe, we changed this port to <em>6022</em>. So, we are going to need to enable this port for SSH access. We do this with the following command: <code>$sudo ufw allow 6022</code>. You should see an output similar to what is shown here.<br>
+<strong><em>NOTE.</em></strong> As is shown below, port 6022 is open, as is Apache. Port 80 is closed. If you do not have these same configurations at this point, that is ok, we will configure Apache and HTTP (i.e., port 80) in later recipe when we configure LAMP.</li>
+</ol>
+<figure>
+  <img src="file:////Users/andrewdurham/github.com/regis/MSSE-695-SE-RD/UFWPortStatus.png" alt="Screen shot of terminal UFW port status" />
+  <figcaption>Fig 1: Output of UFW Status</figcaption>
+</figure>
+<h4 id="configure-authentication-key-pair">Configure Authentication Key pair.</h4>
+<p>We are going to want to set up our SSH access to be password-less, but we will use an end-to-end (E2E) encryption key for access. This will prevent brute-force password attacks. The concept behind this is that we will have a key pair where one key is stored on the client machine and the other is stored on the server. Here is how we go about this.</p>
+<ol start="7">
+<li>First, determine if there are keys on client machine. <code>$ls -l ~/.ssh/id_*.pub</code> . If the response is 'there are no keys', then we will have to generate them as follows: <br>
+<code>$ssh-keygen -t rsa -b 4096 -C &quot;your_email@domain.com</code> <br>
+This will generate a key pair. The output will show the default directory:</li>
+</ol>
+<pre><code>Output
+Enter file in which to save the key (/home/username/.ssh/id_rsa):
+</code></pre>
+<ol start="8">
+<li>Select this directory and hit enter. You will be prompted to enter a password associated with this. <strong><em>NOTE.</em></strong> <em>Adding this password provides another layer of security in case someone were to gain access to client or server, they would need password to obtain key pair.</em></li>
+</ol>
+<ul>
+<li>The key should now be installed on client machine. We can check this by issuing: <code>$ls -l ~/.ssh/id_*.pub</code>. You should see the key file:<code> /home/username/.ssh/id_rsa.pub</code></li>
+</ul>
+<ol start="9">
+<li>Copy public key to server. Now all we need to do is copy this file to the server we want to access. We will use a utility <code>called ssh-copy-id</code>.</li>
+</ol>
+<ul>
+<li>Here is the command we issue to copy key file from client to server:<br>
+<code>$ssh-copy-id remote_username@server_ip_address</code></li>
+</ul>
+<ol start="10">
+<li>Enter remote username when prompted.</li>
+</ol>
+<ul>
+<li>The user will then be authenticated.<br>
+<strong><em>NOTE.</em></strong> <em>The public key <em>~/.ssh/id_rsa.pub</em> will be appended to the remote user <em>~/.ssh/authorized_keys</em> file and connection will be closed.</em><br>
+<strong><em>NOTE.</em></strong> <em>If the copy utility is not available, you can use the following command for this action:</em><pre><code>$cat ~/.ssh/id_rsa.pub | ssh remote_username@server_ip_address &quot;mkdir -p ~/.ssh &amp;&amp; chmod 700 ~/.ssh &amp;&amp; cat &gt;&gt; ~/.ssh/authorized_keys &amp;&amp; chmod 600 ~/.ssh/authorized_keys&quot;
+</code></pre>
+</li>
+</ul>
+<h4 id="logon-to-server-using-ssh-keys">Logon to Server using SSH Keys.</h4>
+<p>Now that we have our ssh keys configured for client access to server, we can login with SSH.</p>
+<ol start="11">
+<li>Login to server with SSH by issuing the following command:<br>
+<code>$ssh remote_username@server_ip_address</code><br>
+<strong><em>NOTE.</em></strong> <em>If you have not entered a password for access, you will be prompted to do so. Once this is entered, the next time you login you will no longer be prompted for this.</em></li>
+</ol>
+<h3 id="disabling-ssh-password-authentication">Disabling SSH Password Authentication</h3>
+<p>Now we are going to revisit our SSH configuration file on our server to take some preliminary actions to increase security. In its current form, any would-be hacker could attempt to access our server via SSH through our SSH port (i.e., 6022). While the hacker would need to correctly guess username and password, given enough time, this is one way servers are compromised. To prevent this, we are going to disable password authentication. This won't close the port, but it will make it so that someone would need our key pair to access our server through SSH.<br>
+12) Login to server via SSH: <code>$ssh username@server_ip - p 6022</code><br>
+13)  Now we are going to access the configuration file: <code>$sudo nano /etc/ssh/sshd_config</code><br>
+14)  Find the following sections and make the changes seen here:</p>
+<pre><code>PasswordAuthentication no
+ChallengeResponseAuthentication no
+UsePAM no
+</code></pre>
+<ol start="15">
+<li>Exit and save file. Restart ssh service with:
+<code>$sudo systemctl restart ssh</code></li>
+<li>Test access once more to server via SSH by logging off and logging in via SSH without password authentication.</li>
+<li><strong><em>End</em> of recipe.</strong></li>
+</ol>
+<h2 id="summary">Summary</h2>
+<p>In this recipe we configured UFW and SSH access to our server which involved setting the port for SSH access, as well as generating and storing key pairs on our client and server machines. Following this, we tested access through SSH and password authentication, and then disabled password authentication and tested this once more. At this point we have taken preliminary steps to harden our server and increase the security of our server. In the next recipe, we are going to continue with security hardening by installing fail2ban and whitelisting ips that are accessing our server and installing a virtual private network (VPN).</p>
+<h3 id="important-commands">Important Commands</h3>
+<h4 id="access-netplan-configuration-file">Access netplan configuration file</h4>
+<p><code>$sudo nano 99-config.yaml </code></p>
+<p><strong>Definitions:</strong><br>
+<strong><em>E2E</em></strong> - End-to-end encryption is a server technology where a key pair is generated and only shared between client machine and server. If the client attempts to connect to the server without the key or, if the client connects with a server that is 'spoofed' (i.e., a different server than the origial, as is used in man-in-the-middle attacks) then access will be denied.</p>
+<p><strong><em>SSH</em></strong> - Secure shell is a server-side technology which allows for remote access from clients to server. SSH is configured through a series of steps which can enable allowing client access to the server through a dedicated port, typically port 22. While allowing access to servers through SSH poses security risks, there are steps which can be taken to limit access, and enhance security. These include, changing port number, enabling password-less access, enabling end-to-end encryption and white-listing known ip addresses.</p>
+<p>UFW - Uncomplicated firewall is a firewall technology that comes built in most Linux systems, including Ubuntu Server. The main function of UFW is to monitor and control access to our server via open ports. There are a great many other functions for which  UFW is responsible.
+YAML - this is a python extension in the form of .yaml that is used in Netplan configuration files in Linux. It stands for 'Ain't Markup Language' see <a href="https://yaml.org/">https://yaml.org/</a>.</p>
+<p>White Spider 🕸️ - This is a phrase used to describe the state of a server before it is <em>hardened</em>, and when it is vulnerable to security breaches. A server is typically in a <em>white spider</em> state the moments approaching, moments of, and moments after -  a server goes <em>live</em>. This is the most vulnerable stage of a server's lifecycle. This is similar to a spider. The most vulnerable stage of its life is right after it molts when it's shell is soft and it is white in color. In this stage it is largely defenseless and offenseless - prone to harm. As such, spiders molt at night. The same principle can be applied to server deployment - the moment a server goes live. So <em>hardening</em> the server is akin to the spider's shell hardening and camoflauging. So, we are <em>hardening</em> the <em>white spider</em> in this case.</p>
+<p><strong>Resources:</strong></p>
+<ol>
+<li><a href="https://help.ubuntu.com/lts/serverguide/index.html">https://help.ubuntu.com/lts/serverguide/index.html</a></li>
+<li><a href="https://www.ubuntufree.com/ubuntu-18-04-server-guide/">https://www.ubuntufree.com/ubuntu-18-04-server-guide/</a></li>
+</ol>
+<hr>
+<h2 id="recipe-23--ubuntu-server---security-hardening-contd-fail2ban-whitelisting-security-banner">Recipe 2.3: 📒 Ubuntu Server - Security Hardening (Cont'd.): Fail2ban, Whitelisting, Security Banner</h2>
+<hr>
+<p><em>Date:</em> Nov 28, 2020<br>
+<em>Author:</em> Kevin Pyatt<br>
+<em>Category:</em> Ubuntu Server Installation, Security Configurations, Server Hardening<br>
+<em>Keywords:</em> server installation, ubuntu server, security configurations, whitelisting, fail2ban, VPN<br>
+<em>Hardware:</em> Desktop/Laptop PC, Mac or Pi, modem and router conected to internet\
+<em>Software:</em> Linux<br>
+<em>Preliminary:</em> Review the following authoritative materials in preparation for Lab.</p>
+<ol>
+<li>Installation guide for Ubuntu Server OS: <a href="https://help.ubuntu.com/lts/serverguide/index.html">https://help.ubuntu.com/lts/serverguide/index.html</a></li>
+<li>How to Harden your Ubuntu 18.04 Server <a href="https://medium.com/@BaneBiddix/how-to-harden-your-ubuntu-18-04-server-ffc4b6658fe7">https://medium.com/@BaneBiddix/how-to-harden-your-ubuntu-18-04-server-ffc4b6658fe7</a></li>
+</ol>
+<ul>
+<li>Before starting this recipe, complete preliminary security hardening as described in Recipe: &quot;Preliminary Security Hardening &amp; SSH Configuration&quot;.</li>
+</ul>
+<h2 id="overview">Overview</h2>
+<p>At this point we now have completed the preliminary security hardening steps for our Server. As we discussed earlier, security for our server takes place in three stages: <em>preliminary</em>, <em>continued</em>, and <em>ongoing</em>. We are going to continue hardening our server in this recipe by installing a service called <em>fail2ban</em>. This service logs attempted access to our server by storing ip address, access points attempted, and number of attempts, as well as other pertinent information. With fail2ban, we specify the number of failed attempts allowed, and then block the ip for future login attempts. We are also going to <em>whitelist</em> the IPs of known users who will be accessing this server. This will make it so any ip not whitelisted will be blocked. Lastly, we are going to install a virtual private network (VPN) and configure this in place of SSH access. VPN is more secure than SSH because the access port is not easily visible to potential hackers like our &quot;open&quot; SSH port.</p>
+<h2 id="-steps">?? Steps</h2>
+<h3 id="installing-and-configuring-fail2ban">Installing and Configuring Fail2Ban</h3>
+<ol>
+<li>We will first begin by checking if fail2ban is installed and installing it if it is not.<br>
+<code>$systemctl status fail2ban</code></li>
+</ol>
+<ul>
+<li>If the service is not installed, then go ahead and do so by issuing:<br>
+<code>$sudo apt-get install fail2ban</code></li>
+<li>Now if we run staus we should see service is installed and running.</li>
+</ul>
+<ol start="2">
+<li>Access the directory for fail2ban config files at: <code>$cd/etc/fail2ban</code>. The output will look something similar to what is shown in the figure below.</li>
+</ol>
+<figure>
+  <img src="file:////Users/andrewdurham/github.com/regis/MSSE-695-SE-RD/Fail2banDir.png" alt="Fail2ban directory" />
+  <figcaption>Fig ?: Output of Fail2ban Directory</figcaption>
+</figure>
+<ul>
+<li>
+<p>Here we see ten files, two of which are configuration files we will not modify: <em>fail2ban.d</em>, and <em>fail2ban.conf</em>. These files can be modified on system updates, so we are going to leave them as is.</p>
+</li>
+<li>
+<p>We will now turn our attention to the files we can modify. The precedence for modifications will follow the order shown here:</p>
+<ul>
+<li>/etc/fail2ban/jail.conf</li>
+<li>/etc/fail2ban/jail.d/*.conf</li>
+<li>/etc/fail2ban/jail.local</li>
+<li>/etc/fail2ban/jail.d/*.local</li>
+</ul>
+</li>
+<li>
+<p>For our basic configuration, we will work on the first one shown above. Issue the following command to read this file: <code>$sudo nano /etc/fail2ban/jail.conf</code>. We are only going to study the information here and then close.</p>
+</li>
+</ul>
+<ol start="3">
+<li>Make copy of <em>jail.conf</em>. We are next going to copy this file to jail.local by issuing the following command: <code>$sudo cp jail.conf jail.local</code></li>
+</ol>
+<h3 id="whitelisting-ip-addresses">Whitelisting IP Addresses</h3>
+<ol start="4">
+<li>Now we are going to modify <em>jail.local</em>. Type <code>$sudo nano jail.local</code>.</li>
+</ol>
+<figure>
+  <img src="file:////Users/andrewdurham/github.com/regis/MSSE-695-SE-RD/Whitelisting.png" alt="ignoreip" />
+  <figcaption>Fig ?: Fail2ban Whitelising with ignoreip</figcaption>
+</figure>
+<ul>
+<li>Specifically, we are going to find <em>ignoreip</em> and uncomment the # in front of it. We can then add known ip addresses for which we want to give access to our server. Simply add these addresses and then save and exit.</li>
+<li>We have now completed essential steps to harden our server. We can monitor access to our server through a variety of ways. We can monitor the jail.log file to identify banned ips which have attempted to access our server. We can also monitor the access logs. To do this, issue the following command:<br>
+<code> $ grep &quot;Failed password&quot; /var/log/auth.log</code></li>
+<li>The output of this will give you the ip addresses of systems which have attempted to access your server.</li>
+</ul>
+<h3 id="installing-security-banner">Installing Security Banner</h3>
+<h3 id="and-">and ...</h3>
+<h3 id="and-">and ...</h3>
+<ol start="10">
+<li><strong><em>End of Recipe</em></strong></li>
+</ol>
+<hr>
+<h2 id="recipe-24--server---security-hardening-contd-virtual-private-network-vpn">Recipe 2.4: 📒 Server - Security Hardening (Cont'd.): Virtual Private Network (VPN)</h2>
+<hr>
+<p><em>Date:</em> Dec 03, 2020<br>
+<em>Author:</em> Kevin Pyatt<br>
+<em>Category:</em> Ubuntu Server Installation, Security Configurations, Server Hardening, Virtual Private Network<br>
+<em>Keywords:</em> server installation, ubuntu server, security configurations, VPN<br>
+<em>Hardware:</em> Desktop/Laptop PC, Mac or Pi, modem and router conected to internet<br>
+<em>Software:</em> Linux<br>
+<em>Preliminary:</em> Review the following authoritative materials in preparation for Lab.</p>
+<ol>
+<li>Installation guide for Ubuntu Server OS: <a href="https://help.ubuntu.com/lts/serverguide/index.html">https://help.ubuntu.com/lts/serverguide/index.html</a></li>
+<li>How to Harden your Ubuntu 18.04 Server <a href="https://medium.com/@BaneBiddix/how-to-harden-your-ubuntu-18-04-server-ffc4b6658fe7">https://medium.com/@BaneBiddix/how-to-harden-your-ubuntu-18-04-server-ffc4b6658fe7</a></li>
+<li><a href="https://www.cyberciti.biz/faq/ubuntu-18-04-lts-set-up-openvpn-server-in-5-minutes">https://www.cyberciti.biz/faq/ubuntu-18-04-lts-set-up-openvpn-server-in-5-minutes</a></li>
+</ol>
+<ul>
+<li>Before starting this recipe, complete preliminary security hardening as described in Recipe: &quot;Preliminary Security Hardening &amp; SSH Configuration&quot;.</li>
+</ul>
+<h2 id="overview">Overview</h2>
+<p>One vulnerability that exists on our current server system is access through SSH. While we have changed the default port, created encrypted keys for access through non-password accounts, we still have an open port that can be easily found through simple networking scans which most hackers are well equipped. We are going to setup a Virtual Private Network (VPN) which will allow us to access the server through an even more secure means, and we will then shutdown SSH after we configure VPN. We are going to use SSH access while we are setting up and configuring VPN, however.</p>
+<p>A Virtual Private Network (VPN) is a technology that allows for connection of a client machine to a server through a dedicated and encrypted port. This is an essential technology that ensures a highly secure environment for you to access the internet and online resources. Any time we access the internet form our client machine over a public connection can result in data and internet traffic being intercepted. VPN helps with this and is an essential tool for protecting your data, privacy and internet usage in a way that is diccicult to intercept or track.</p>
+<h2 id="14-steps">14 Steps</h2>
+<h3 id="before-installation">Before installation</h3>
+<ol>
+<li>Update and upgrade your machine: <code>$sudo apt update | apt upgrade</code></li>
+<li>Identify your IP using <code>$ip a</code></li>
+<li>Review information for file transfer from server to local machine. Specifically, using SCP or SMTP.</li>
+</ol>
+<h3 id="installation">Installation</h3>
+<ol>
+<li>Download and Install <em>openvpn</em> as follows: <code>$wget https://git.io/vpn -O openvpn-install.sh</code></li>
+<li>Change permissions with chmod: <code>$chmod +x openvpn-install.sh</code><br>
+<strong><em>NOTE.</em></strong> <em>The directory for this installation is</em> <code>/etc/openvpn</code>.</li>
+<li>Run <a href="http://openvpn-install.sh">openvpn-install.sh</a>: <code>$sudo ./openvpn-install.sh</code><br>
+<strong><em>NOTE.</em></strong> <em>During this time you will specify IP address, NAT (if there is one), protocol, port (default is 1194), DNS (use 1.1.1.1), DNS [1-5], Client Name.</em><br>
+<strong><em>NOTE</em>.</strong> <em>At this stage, on the server, there should be a file called &quot;~/desktop.ovpn&quot;. You will need to get this copied over to the client machine as shown in next step.</em></li>
+<li>Transfer deskktop.ovpn from server to client machine:<br>
+<code>$sftp kevin@173.8.254.145:'desktop.ovpn' Desktop/</code><br>
+<strong><em>NOTE</em>.</strong> <em>In this example I used <em>sftp</em> for the file transfer, although <em>scp</em> should also work. I also used <em>aquarius.ovpn</em> as the file name instead. I changed the name in preparation for multiple VPNs.</em> <em>Specifically:</em> <code>$sftp kevin@173.8.254.145:'aquarius.ovpn' Desktop/</code></li>
+<li>Install openvpn on Linux Client: <code>$sudo apt install openvpn</code><br>
+<strong><em>NOTE</em>.</strong> <em>There are other clients you can install and run using Android, Windows or iOS. See lab reference below for instructions.</em></li>
+<li>Copy desktop.ovpn to openvpn directory on client machine:<br>
+<code>$sudo cp desktop.ovpn /etc/openvpn/client.conf</code></li>
+<li>Test Connectivity: <code>$sudo openvpn --client --config /etc/openvpn/desktop.conf</code></li>
+<li>Connect Client to VPN on server:<code>$sudo systemctl start openvpn@client # &lt;--- start client service</code></li>
+</ol>
+<!-- this needs to be fixed --->
+<ol start="9">
+<li>Verify/test Connectivity. Ping to the OpenVPN server gateway:<br>
+<code>$ping 10.8.0.1</code></li>
+<li>Debugging: <code>$journalctl --identifier ovpn-server</code></li>
+<li><strong><em>End of recipe</em>.</strong></li>
+</ol>
+<h3 id="important-commands">Important Commands</h3>
+<h4 id="startstoprestartstatus">Start/Stop/Restart/Status</h4>
+<p><code>$sudo systemctl stop openvpn@server # &lt;--- stop server</code><br>
+<code>$sudo systemctl start openvpn@server # &lt;--- start server</code><br>
+<code>$sudo systemctl restart openvpn@server # &lt;--- restart server</code><br>
+<code>$sudo systemctl status openvpn@server # &lt;--- get server status</code></p>
+<h4 id="secure-copy-protocol-scp">Secure Copy Protocol (SCP)</h4>
+<p><code>$scp remote_username@10.10.0.2:/remote/file.txt /local/directory</code></p>
+<h3 id="definitions">Definitions</h3>
+<h3 id="resources">Resources</h3>
+<ol>
+<li><a href="https://help.ubuntu.com/lts/serverguide/index.html">https://help.ubuntu.com/lts/serverguide/index.html</a></li>
+<li><a href="https://www.ubuntufree.com/ubuntu-18-04-server-guide/">https://www.ubuntufree.com/ubuntu-18-04-server-guide/</a></li>
+<li><a href="https://www.cyberciti.biz/faq/ubuntu-18-04-lts-set-up-openvpn-server-in-5-minutes/">https://www.cyberciti.biz/faq/ubuntu-18-04-lts-set-up-openvpn-server-in-5-minutes/</a></li>
+</ol>
+<hr>
+<h2 id="recipe--server---never-finished---security-hardening-">Recipe: 📒 Server - 'Never Finished' - Security Hardening 📒</h2>
+<ul>
+<li>for this section, review security hardening techniques in field book. Consider renaming this recipe, or adding another recipe called advanced security for Full Stack Arcitectures.</li>
+</ul>
+<h2 id="recipe--ubuntu-server---lamp-">Recipe: 📒 Ubuntu Server - LAMP 📒</h2>
+<h1 id="lab-iii---linux-server---services-webservers-and-databases-">Lab III - Linux Server - Services, Webservers and Databases 🔬</h1>
+<ul>
+<li>in this section, you are going to build out services. review presentation documentation. examples of services include: email, rocketchat?, moodle, canvas, wordpress framework.</li>
+</ul>
+<h1 id="lab-iv---application-design--development-">Lab IV - Application Design &amp; Development 🔬</h1>
+<ul>
+<li>have students build-out their own full-stack r&amp;d site.</li>
+<li>reaction master</li>
+<li>continuing build on ecosystem</li>
+</ul>
+<h1 id="lab-v---applications-design-and-development">Lab V - Applications Design and Development🔬</h1>
+<h1 id="lab-vi---uiux-">Lab VI - UI/UX 🔬</h1>
+<h1 id="lab-vii---uiux-">Lab VII - UI/UX 🔬</h1>
+<h1 id="appendices">Appendices</h1>
+<p>Chemical Equations</p>
+<h4 id="volumetric-analysis">Volumetric Analysis</h4>
+<ol>
+<li>H<sub>2</sub>SO<sub>4 </sub><sub> <em>(aq)</em></sub> + 2NaOH<sub> <em>(aq)</em></sub> → 2H<sub>2</sub>O<sub> <em>(l)</em></sub> + 2Na<sup>+</sup><sub> <em>(aq)</em></sub> + SO<sub>4</sub><sup>2-</sup><sub> <em>(aq)</em></sub></li>
+</ol>
+<h4 id="gravimetric-analysis">Gravimetric Analysis</h4>
+<ol>
+<li>2Mg<sub> <em>(s)</em></sub> + O<sub>2</sub><sub> <em>(g)</em></sub> → 2MgO<sub> <em>(s)</em></li>
+</ol>
+<p>Miscellaneous links and images
+<img src="file:////Users/andrewdurham/github.com/regis/MSSE-695-SE-RD/BunsenBurner.svg" alt="Bunsen Burner" style="width:75px;"/></p>
+<script src="//yihui.org/js/math-code.js"></script>
+<!-- Just one possible MathJax CDN below. You may use others. -->
+<script async
+  src="//mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+
+</script>
+<p>\frac{\frac{1}{x}+\frac{1}{y}}{y-z}</p>
+<p>Recipes for Security Testing Linux Server</p>
+<p><code> $ grep &quot;Failed password&quot; /var/log/auth.log</code></p>
+<h1 id="references">References</h1>
+<ul>
+<li>add bibliograpic references here</li>
+</ul>
+<p>\listoffigures</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Time</th>
+<th style="text-align:left">Mon</th>
+<th style="text-align:left">Tue</th>
+<th style="text-align:left">Wed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">8</td>
+<td style="text-align:left"></td>
+<td style="text-align:left"></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">9</td>
+<td style="text-align:left"></td>
+<td style="text-align:left"></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">9</td>
+<td style="text-align:left"></td>
+<td style="text-align:left"></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">9</td>
+<td style="text-align:left"></td>
+<td style="text-align:left"></td>
+<td style="text-align:left"></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Day</th>
+<th style="text-align:left">Availability</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Tue Dec 8</td>
+<td style="text-align:left">available after 2 pm EST</td>
+</tr>
+<tr>
+<td style="text-align:left">Wed Dec 9</td>
+<td style="text-align:left">not available</td>
+</tr>
+<tr>
+<td style="text-align:left">Thu Dec 10</td>
+<td style="text-align:left">available between 3-4 EST</td>
+</tr>
+<tr>
+<td style="text-align:left">Fri Dec 11</td>
+<td style="text-align:left">available</td>
+</tr>
+<tr>
+<td style="text-align:left">Mon Dec 14</td>
+<td style="text-align:left">not available</td>
+</tr>
+<tr>
+<td style="text-align:left">Tue Dec 15</td>
+<td style="text-align:left">available</td>
+</tr>
+<tr>
+<td style="text-align:left">Wed Dec 16</td>
+<td style="text-align:left">not available</td>
+</tr>
+<tr>
+<td style="text-align:left">Thu Dec 17</td>
+<td style="text-align:left">available between 8am - 2pm EST</td>
+</tr>
+<tr>
+<td style="text-align:left">Fri Dec 18</td>
+<td style="text-align:left">available between 10-12 EST</td>
+</tr>
+</tbody>
+</table>
+
+        <script async src="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.js"></script>
+        
+    </body>
+    </html>
